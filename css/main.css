@@ -1,130 +1,112 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.6;
-  
-    
-    background-color: rgba(16, 16, 16, 0.521) !important; /* Gris claro con 70% de opacidad */
-    
-    color: #333;
-  }
-  
-  header {
-    background-color: rgba(16, 16, 16, 0.521) !important; /* Gris claro con opacidad */
-    color: rgb(0, 0, 0);
-    padding: 0.8rem 1rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    font-size: 1.2rem;
-    text-transform: lowercase;
-    font-weight: bold;
-  }
-  
-  .navbar nav a {
-    color: rgb(0, 0, 0);
-    margin-left: 1rem;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s;
-  }
-  
-  .navbar nav a:hover {
-    color: #38bdf8;
-  }
-  
-  .main-content {
-    max-width: 800px;       /* ancho más centrado para lectura */
-    margin: 2rem auto;      /* centra horizontalmente */
-    padding: 0 1rem;
-    text-align: center;    /* justifica el texto */
-  }
-  .main-content h2,
-  .main-content h3,
-  .main-content p {
-    text-align: justify;
-  }
-
-  .section {
-    margin-bottom: 2rem;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar nav {
-      margin-top: 0.5rem;
-    }
-  
-    .navbar nav a {
-      display: block;
-      margin: 0.5rem 0;
-    }
-  }
-  /* Tamaños de fuente base para pantallas grandes */
-body {
-  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header .logo {
-  font-size: 1.4rem;
+/* Fondo aplicado directamente al body */
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', 'RobotoDraft', 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
+  background-color: rgba(196, 196, 196, 0.759); /* gris traslúcido */
+
+  background-image:l;
+  background-size: cover;               /* que cubra todo */
+  background-repeat: no-repeat;         /* sin repetir */
+  background-attachment: fixed;         /* efecto fijo al hacer scroll */
+  background-position: center top;      /* centrada arriba */
+  background-blend-mode: overlay;       /* mezcla sutil con el fondo gris */
+}
+
+/* Header sticky sobre fondo traslúcido */
+header {
+  background-color: rgba(43, 52, 63, 0.405); /* gris traslúcido */
+  padding: 1rem;
+  position: static;
+  width: 100%;
+}
+
+
+.navbar {
+  font-size: 1.3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #000000;
+}
+
+.logo-img {
+  width: 55px; /* o el tamaño que prefieras */
+  height: auto;
+  margin-right: 1.5rem;
 }
 
 .navbar nav a {
-  font-size: 1.1rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.main-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.navbar nav a:hover {
+  color: #38bdf8;
 }
 
-.main-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
+/* Contenido principal */
+.main-content {
+  background-color: transparent;
+  max-width: 100%;
+  margin: 5rem auto;
+  padding: 0 8rem;
 }
 
-.main-content p {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-  line-height: 1.8;
+.section {
+  margin-bottom: 2rem;
 }
 
-/* Ajustes responsivos para pantallas pequeñas */
+.main-content h1, .main-content h3, .main-content p {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  header .logo {
-    font-size: 1.2rem;
+  .navbar nav {
+    margin-top: 0.5rem;
   }
 
   .navbar nav a {
-    font-size: 1rem;
+    display: block;
+    margin: 0.5rem 0;
   }
 
-  .main-content h2 {
+  .main-content {
+    padding: 0 1rem;
+  }
+
+  .main-content h1 {
     font-size: 1.6rem;
   }
 
@@ -137,4 +119,9 @@ header .logo {
   }
 }
 
-  
+/* Ocultar el header al hacer scroll */
+header.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
