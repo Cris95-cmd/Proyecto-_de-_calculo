@@ -14,9 +14,8 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', 'RobotoDraft', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
-  background-color: rgba(196, 196, 196, 0.759); /* gris traslúcido */
-
-  background-image:l;
+  background: rgba(196, 196, 196, 0.759)              /* gris traslúcido */
+                    url('Imagenes/fondo calculo.jpg');
   background-size: cover;               /* que cubra todo */
   background-repeat: no-repeat;         /* sin repetir */
   background-attachment: fixed;         /* efecto fijo al hacer scroll */
