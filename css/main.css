@@ -14,13 +14,13 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', 'RobotoDraft', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
-  background: rgba(196, 196, 196, 0.759)              /* gris traslúcido */
-                    url('Imagenes/fondo calculo.jpg');
-  background-size: cover;               /* que cubra todo */
-  background-repeat: no-repeat;         /* sin repetir */
-  background-attachment: fixed;         /* efecto fijo al hacer scroll */
-  background-position: center top;      /* centrada arriba */
-  background-blend-mode: overlay;       /* mezcla sutil con el fondo gris */
+  background-color: rgba(196, 196, 196, 0.822);
+  background-image: url('Imag/fondo\ 2.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 /* Header sticky sobre fondo traslúcido */
