@@ -2,6 +2,11 @@
 // Inicia sesiones (útil para logins futuros)
 session_start();
 
+if (isset($_SESSION['registro_exitoso'])) {
+    echo '<div class="alert success" style="text-align: center; margin: 20px auto; max-width: 500px;">¡Registro exitoso! Ya puedes iniciar sesión</div>';
+    unset($_SESSION['registro_exitoso']);
+}
+
 // Conecta a la base de datos (si es necesario)
 require_once 'Sistema/conexion.php';
 
@@ -16,7 +21,7 @@ $mensaje_bienvenida = "¡Bienvenido al curso de cálculo!";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cálculo Continuo</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
 
@@ -64,7 +69,7 @@ $mensaje_bienvenida = "¡Bienvenido al curso de cálculo!";
         </div>
       </div>
     </section>
-    
+
   </main>
 
   <script src="js/main.js"></script>
