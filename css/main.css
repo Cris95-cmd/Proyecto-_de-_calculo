@@ -25,12 +25,11 @@ body {
 
 /* Header sticky sobre fondo traslúcido */
 header {
-  background-color: rgba(43, 52, 63, 0.405); /* gris traslúcido */
+  background-color: rgba(43, 52, 63, 0.405);
   padding: 1rem;
   position: static;
   width: 100%;
 }
-
 
 .navbar {
   font-size: 1.3rem;
@@ -50,7 +49,7 @@ header {
 }
 
 .logo-img {
-  width: 55px; /* o el tamaño que prefieras */
+  width: 55px;
   height: auto;
   margin-right: 1.5rem;
 }
@@ -80,9 +79,89 @@ header {
   margin-bottom: 2rem;
 }
 
-.main-content h1, .main-content h3, .main-content p {
+.main-content h1, 
+.main-content h3, 
+.main-content p {
   text-align: center;
   color: rgb(0, 0, 0);
+}
+
+/* ===== ESTILOS PARA FORMULARIOS ===== */
+.auth-form {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h3 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #38bdf8;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.auth-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+  color: #0ea5e9;
 }
 
 /* Responsivo */
@@ -102,7 +181,7 @@ header {
   }
 
   .main-content {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
   .main-content h1 {
@@ -113,8 +192,25 @@ header {
     font-size: 1.3rem;
   }
 
-  .main-content p {
-    font-size: 1rem;
+  .auth-form {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0 1rem;
+    margin: 3rem auto;
+  }
+  
+  .auth-form {
+    padding: 1.2rem;
+  }
+  
+  .form-control,
+  .btn {
+    padding: 14px;
   }
 }
 
