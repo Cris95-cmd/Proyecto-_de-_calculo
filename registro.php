@@ -3,7 +3,12 @@ session_start();
 require_once 'Sistema/conexion.php';
 
 $error = '';
-$success = '';
+
+// Al registrar exitosamente (dentro del else)
+$_SESSION['registro_exitoso'] = true;
+unset($_SESSION['login_error']); // Limpia posibles errores previos
+header("Location: index.php");
+exit();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
@@ -51,23 +56,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="css/registro.css">
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="Imagenes/logo.png" alt="Logo" class="logo-img">
-        Cálculo Continuo
-      </div>
-      <nav>
-        <a href="index.php">Inicio</a>
-        <a href="index.php">Acceder</a>
-      </nav>
-    </div>
-  </header>
-
   <main class="main-content">
     <section class="section">
       <div class="auth-form">
-        <h3>Crear nueva cuenta</h3>
+        <h3>Crear cuenta nueva</h3>
         
         <?php if ($error): ?>
           <div class="alert error"><?php echo $error; ?></div>
@@ -101,14 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           
           <button type="submit" class="btn">Registrarse</button>
         </form>
-        
-        <div class="auth-links">
-          <a href="index.php">¿Ya tienes cuenta? Inicia sesión</a>
-        </div>
       </div>
     </section>
   </main>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

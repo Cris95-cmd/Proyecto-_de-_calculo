@@ -1,17 +1,17 @@
 <?php
-// Inicia sesiones (útil para logins futuros)
 session_start();
 
+// Mensaje de registro exitoso
 if (isset($_SESSION['registro_exitoso'])) {
-    echo '<div class="alert success" style="text-align: center; margin: 20px auto; max-width: 500px;">¡Registro exitoso! Ya puedes iniciar sesión</div>';
+    echo '<div class="registro-exitoso">¡Registro exitoso! Ya puedes iniciar sesión</div>';
     unset($_SESSION['registro_exitoso']);
 }
 
-// Conecta a la base de datos (si es necesario)
-require_once 'Sistema/conexion.php';
-
-// Ejemplo: Mostrar un mensaje dinámico
-$mensaje_bienvenida = "¡Bienvenido al curso de cálculo!";
+// Mensaje de error de login
+if (isset($_SESSION['login_error'])) {
+    echo '<div class="login-error">' . $_SESSION['login_error'] . '</div>';
+    unset($_SESSION['login_error']);
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,36 +24,35 @@ $mensaje_bienvenida = "¡Bienvenido al curso de cálculo!";
   <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-
   <header>
     <div class="navbar">
       <div class="logo">
         <img src="Imagenes/logo.png" alt="Logo" class="logo-img" />
-        Cálculo Continuo</div>
+        Cálculo Continuo
+      </div>
       <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Acceder</a>
-        <!-- Más enlaces -->
+        <a href="index.php">Inicio</a>
+        <a href="registro.php">Registro</a>
       </nav>
     </div>
   </header>
 
   <main class="main-content">
     <section class="section">
-      <h1>Bienvenido a Cálculo Continuo</h1> <br><br>
-      <p>Este portal está diseñado para estudiantes de preparatoria y universidad interesados en aprender cálculo </p> <br><br>
+      <h1>Bienvenido a Cálculo Continuo</h1>
+      <p>Este portal está diseñado para estudiantes de preparatoria y universidad interesados en aprender cálculo.</p>
     </section>
 
     <section class="section">
       <h3>¿Qué encontrarás aquí?</h3>
-      <p>Contenido organizado por temas, ejercicios interactivos, evaluaciones y recursos visuales para mejorar tu comprensión del cálculo.</p>
+      <p>Contenido organizado por temas, ejercicios interactivos, evaluaciones y recursos visuales.</p>
     </section>
 
- <!-- ===== NUEVO FORMULARIO DE LOGIN ===== -->
+    <!-- FORMULARIO DE LOGIN (COMPLETO) -->
     <section class="section">
       <div class="auth-form">
         <h3>Iniciar sesión</h3>
-        <form action="Sistema/procesar_login.php" method="POST">
+        <form method="POST" action="Sistema/procesar_login.php">
           <div class="form-group">
             <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" class="form-control" required>
@@ -62,19 +61,15 @@ $mensaje_bienvenida = "¡Bienvenido al curso de cálculo!";
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" class="form-control" required>
           </div>
-          <button type="submit" class="btn">Acceder</button>
+          <button type="submit" class="btn">Iniciar sesión</button>
+          <div class="auth-links">
+            ¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a>
+          </div>
         </form>
-        <div class="auth-links">
-          <a href="registro.php">¿No tienes cuenta? Regístrate</a>
-        </div>
       </div>
     </section>
-
   </main>
 
   <script src="js/main.js"></script>
-  
 </body>
 </html>
-
-
