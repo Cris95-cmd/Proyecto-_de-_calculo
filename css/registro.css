@@ -1,7 +1,7 @@
 /* registro.css - Estilo minimalista sin header */
 body {
     background-color: rgba(196, 196, 196, 0.85);
-    background-image: url('../Imagenes/fondo\ 2.jpg');
+    background-image: url('Imag/fondo\ 2.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -150,7 +150,7 @@ body {
 }/* registro.css - Estilo minimalista sin header */
 body {
     background-color: rgba(196, 196, 196, 0.85);
-    background-image: url('../Imagenes/fondo\ 2.jpg');
+    background-image: url('Imag/fondo\ 2.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
