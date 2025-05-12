@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmt->execute([$nombre, $edad, $email, $hashed_password]);
                 
                 $_SESSION['registro_exitoso'] = true;
-                header("Location: ../index.php");
+                header("Location: index.php");
                 exit();
             }
         } catch(PDOException $e) {
@@ -40,3 +40,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Cálculo Continuo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <main class="main-content">
+    <section class="section">
+      <div class="auth-form">
+        <h3>Crear cuenta nueva</h3>
+        
+        <?php if ($error): ?>
+          <div class="alert error"><?php echo $error; ?></div>
+        <?php endif; ?>
+
+        <form method="POST" action="registro.php">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" class="form-control" min="15" max="100" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Contraseña (máx. 20 caracteres)</label>
+            <input type="password" id="password" name="password" class="form-control" maxlength="20" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="confirm_password">Repetir contraseña</label>
+            <input type="password" id="confirm_password" name="confirm_password" class="form-control" maxlength="20" required>
+          </div>
+          
+          <button type="submit" class="btn">Registrarse</button>
+          
+          <div class="auth-links">
+            ¿Ya tienes cuenta? <a href="index.php">Inicia sesión</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
