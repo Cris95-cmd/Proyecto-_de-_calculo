@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* ===== HEADER (VERSIÓN ORIGINAL) ===== */
+/* ===== HEADER MEJORADO (Responsivo pero conserva tu estilo) ===== */
 header {
   background-color: rgba(43, 52, 63, 0.405);
   padding: 1rem;
@@ -38,6 +38,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Permite que el menú se colapse en móviles */
 }
 
 .logo {
@@ -46,12 +47,19 @@ header {
   font-size: 1.2rem;
   font-weight: bolder;
   color: #000000;
+  z-index: 100;
+  transition: transform 0.3s ease;
 }
 
 .logo-img {
   width: 55px;
   height: auto;
   margin-right: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(15deg);
 }
 
 .navbar nav a {
@@ -60,14 +68,31 @@ header {
   font-weight: bolder;
   margin-left: 1rem;
   font-size: 1rem;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 .navbar nav a:hover {
   color: #38bdf8;
 }
 
-/* ===== CONTENIDO PRINCIPAL (SIN RECUADROS) ===== */
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== CONTENIDO PRINCIPAL (Mantengo tus estilos originales) ===== */
 .main-content {
   max-width: 1200px;
   margin: 2rem auto;
@@ -91,7 +116,7 @@ header {
   margin-bottom: 1.5rem;
 }
 
-/* ===== FORMULARIO DE LOGIN (MANTENIENDO ESTILO) ===== */
+/* ===== FORMULARIO DE LOGIN (Tus estilos originales) ===== */
 .auth-form {
   max-width: 450px;
   margin: 2rem auto;
@@ -176,7 +201,7 @@ header {
   color: #0ea5e9;
 }
 
-/* ===== MENSAJES ===== */
+/* ===== MENSAJES (Tus estilos originales) ===== */
 .registro-exitoso {
   position: fixed;
   top: 20px;
@@ -203,7 +228,7 @@ header {
   animation: shake 0.5s ease-in-out;
 }
 
-/* ===== ANIMACIONES ===== */
+/* ===== ANIMACIONES (Tus estilos originales) ===== */
 @keyframes fadeInOut {
   0% { opacity: 0; top: -50px; }
   15% { opacity: 1; top: 20px; }
@@ -217,48 +242,73 @@ header {
   75% { transform: translateX(8px); }
 }
 
-/* ===== RESPONSIVE ===== */
+/* Primero ocultamos el botón en todas las pantallas */
+.menu-toggle {
+  display: none; /* Oculta el botón por defecto */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVE (Mejoras solo para el header) ===== */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+  /* Menú hamburguesa */
+  
+  .menu-toggle {
+    display: block; /* Mostrar solo en móviles */
   }
 
   .navbar nav {
-    margin-top: 0.5rem;
+    display: none;
+    width: 100%;
+    background-color: rgba(43, 52, 63, 0.9);
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    top: 70px; /* Ajusta según la altura de tu header */
+  }
+
+  /* Mostramos el menú cuando tiene clase active */
+  .navbar nav.active {
+    display: block;
   }
 
   .navbar nav a {
     display: block;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    color: white !important;
+    padding: 0.5rem;
   }
 
-  .main-content {
-    padding: 0 1.5rem;
-    margin: 3rem auto;
+   /* Animación del botón hamburguesa a "X" */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  .auth-form {
-    padding: 1.8rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .auth-form {
-    padding: 1.5rem;
+  .logo {
+    font-size: 1rem;
   }
-  
-  .form-control, 
-  .btn {
-    padding: 14px;
-  }
-  
-  .auth-form h3 {
-    font-size: 1.5rem;
-  }
-  
-  .registro-exitoso {
-    width: 90%;
-    padding: 12px 20px;
+
+  .logo-img {
+    width: 45px;
   }
 }

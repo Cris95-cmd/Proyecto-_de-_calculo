@@ -1,0 +1,277 @@
+/* contacto.css - Versión Final para Proyecto Cálculo */
+
+/* ===== ESTILOS BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #333;
+  background-color: rgba(196, 196, 196, 0.85);
+  background-image: url('Imag/fondo\ 2.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: rgba(43, 52, 63, 0.405);
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.navbar {
+  font-size: 1.3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #000000;
+  z-index: 100;
+}
+
+.logo-img {
+  width: 55px;
+  height: auto;
+  margin-right: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(15deg);
+}
+
+.navbar nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.navbar nav a:hover {
+  color: #38bdf8;
+}
+
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== MENÚ HAMBURGUESA ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contacto-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.titulo-equipo {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #2d3748;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.miembro {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miembro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 5px solid #38bdf8;
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.miembro:hover .foto-perfil {
+  transform: scale(1.05);
+}
+
+.miembro h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cargo {
+  color: #4a5568;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.correo-link {
+  display: inline-block;
+  color: #1a73e8; /* Azul de Google */
+  text-decoration: none;
+  margin-bottom: 1rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  background-color: rgba(26, 115, 232, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid rgba(26, 115, 232, 0.2);
+}
+
+.correo-link:hover {
+  color: #0d47a1;
+  background-color: rgba(26, 115, 232, 0.2);
+  text-decoration: underline;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.correo-link:active {
+  transform: translateY(1px);
+}
+
+.institucion {
+  color: #718096;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    width: 100%;
+    background-color: rgba(43, 52, 63, 0.9);
+    padding: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 80px;
+  }
+
+  .navbar nav.active {
+    display: block;
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 1rem 0;
+    color: white !important;
+    padding: 0.8rem;
+  }
+
+  /* Animación a X */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .contacto-container {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .titulo-equipo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .logo-img {
+    width: 45px;
+    margin-right: 1rem;
+  }
+  
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .miembro h2 {
+    font-size: 1.3rem;
+  }
+  
+  .cargo {
+    font-size: 1rem;
+  }
+}

@@ -30,8 +30,15 @@ if (isset($_SESSION['login_error'])) {
         <img src="Imagenes/logo.png" alt="Logo" class="logo-img" />
         Cálculo Continuo
       </div>
+      
+      <button class="menu-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav>
-        <a href="index.php">Inicio</a>
+        <a href="contacto.html">Contáctanos</a>
         <a href="registro.php">Registro</a>
       </nav>
     </div>
@@ -63,13 +70,13 @@ if (isset($_SESSION['login_error'])) {
           </div>
           <button type="submit" class="btn">Iniciar sesión</button>
           <div class="auth-links">
-            ¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a>
+            ¿Aún no tienes cuenta? <a href="registro.php">Regístrate aquí</a>
           </div>
         </form>
       </div>
     </section>
   </main>
 
-  <script src="js/main.js"></script>
+  <script src="js/menutortuga.js" defer></script>
 </body>
 </html>
