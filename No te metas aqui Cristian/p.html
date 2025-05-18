@@ -10,6 +10,27 @@
       margin: 0;
       padding: 0;
     }
+    .tema {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tema-contenido-principal {
+  flex: 3;
+}
+
+.tema-recuadro {
+  flex: 1;
+  background-color: #eef;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  min-width: 150px;
+}
+
 
     body {
       font-family: Arial, sans-serif;
@@ -147,7 +168,7 @@
 <body>
   <div class="topbar">
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+      <img src="../Imagenes/logo.png" alt="Logo" class="logo-img">
       <strong>Mi Software de Cursos</strong>
     </div>
     <nav>
@@ -158,22 +179,30 @@
   </div>
 
   <div class="menu">
-    <h2>Temas</h2>
-    <a href="#tema1">1. Conjuntos y Números</a>
+    <h2>Contenido</h2>
+    <a href="#tema1">1. Polinomios</a>
     <a href="#tema2">2. Operaciones Básicas</a>
     <a href="#tema3">3. Potencias y Raíces</a>
     <!-- Agrega más enlaces aquí -->
   </div>
 
+
   <div class="contenido">
-    <h1>Curso de Preálculo</h1>
+    <h1><i>Curso de Precálculo</i></h1>
     <div class="contenedor">
 
-      <div class="tema" id="tema1">
-        <h2>1. Conjuntos y Números</h2>
-        <p>Explicación de los conjuntos, tipos de números y sus propiedades.</p>
-        <img src="conjuntos.png" alt="Imagen de conjuntos">
-      </div>
+  <div class="tema" id="tema1">
+  <div class="tema-contenido-principal">
+    <h2>1. Polinomios</h2>
+    <p>Explicación de los conjuntos, tipos de números y sus propiedades.</p>
+    <img src="conjuntos.png" alt="Imagen de conjuntos">
+  </div>
+  <div class="tema-recuadro">
+    <p><strong>Dato útil:</strong><br>Los polinomios se pueden clasificar según su grado.</p>
+  </div>
+</div>
+
+     
 
       <div class="tema" id="tema2">
         <h2>2. Operaciones Básicas</h2>
