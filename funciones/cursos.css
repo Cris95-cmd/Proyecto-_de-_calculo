@@ -5,6 +5,73 @@
     --math-gold: #ffd700;
     --math-light: #f0e6ff;
 }
+/*estilo para graficas*/
+.image-pair {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre imágenes */
+  align-items: flex-start; /* Alinea al tope */
+  gap: 20px; /* Espacio entre imágenes */
+}
+
+.image-container {
+  flex: 1; /* Cada contenedor ocupa igual espacio */
+  min-width: 45%; /* Mínimo 45% del ancho para mantener legibilidad */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .image-pair {
+    flex-direction: column;
+    gap: 30px; /* Más espacio vertical en móviles */
+  }
+  
+  .image-container {
+    min-width: 100%; /* Ocupa todo el ancho en móviles */
+  }
+}
+/* Estilos para ejemplos matemáticos */
+.math-example {
+  background: rgba(40, 40, 40, 0.7);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid var(--math-purple);
+}
+
+.example-title {
+  color: var(--math-gold);
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.function-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 5px;
+}
+
+.function-evaluation {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.function-evaluation li {
+  padding: 8px 15px;
+  margin: 5px 0;
+  background: rgba(157, 80, 187, 0.1);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.function-evaluation li:before {
+  content: "• ";
+  color: var(--math-gold);
+}
 
 /* Fondo y partículas */
 body {
