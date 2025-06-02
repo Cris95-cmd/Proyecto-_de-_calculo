@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="cursos.css">
   <link rel="stylesheet" href="curso-prec.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <!-- Partículas de fondo -->
@@ -104,7 +105,7 @@
             <!-- Subtema 1.1 -->
             <h3 id="tema1-1">1.1 Concepto y notación</h3>
             <p>Una función "f" es una regla de correspondencia, es decir, asocia a cada objeto x
-            en un conjunto un único valor f(x) de un segundo conjunto.</p>
+            en un conjunto un único valor $f(x)$ de un segundo conjunto.</p>
             <h4>Notación funcional</h4>
             <p2>Una sola letra como f (o g o F) se utiliza para nombrar una
             función. Entonces f(x), que se lee “f de x” o “f en x”, denota el valor que f asigna a x.
@@ -183,28 +184,37 @@
          
   <div class="math-example">
   <h3 class="example-title">Inyectividad</h3>
-  <div class="math-info-box">
+   <div class="math-info-box">
     <p><strong>Definición:</strong> Una función es inyectiva (uno a uno) si cada elemento del rango proviene de un único elemento del dominio, es otras palabras; no hay dos elementos del dominio que tengan la misma imagen.</p>
   </div>
-  <p>Consideremos la función cuadrática:</p>
-  
-  <div class="function-display">
-    f(x) = x<sup>2</sup>
+   <div class="image-container">
+   <img src="ConjuntosINYEC.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+</div>
+<p>Proceso para verificar inyectividad</p>
+La condición algebraica implica demostrar que si 
+<div class="function-display">
+    f(x) = f(y), entonces x = y. 
   </div>
-  <p>Esta función <strong>no es inyectiva</strong> porque existen diferentes valores de entrada que producen la misma salida</p>
-  <ul class="function-evaluation">
-    <li>f(−2) = (−2)<sup>2</sup> = 4</li>
-    <li>f(2) = (2)<sup>2</sup> = 4</li>
-  </ul>
+  <p>Consideremos las siguientes funciones por ejemplo:</p>
   <div class="image-comparison">
     <div class="image-pair">
       <div class="image-container">
-        <img src="no-inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
-        <p class="image-caption">Gráfico de f(x) = x² (No inyectiva)</p>
+        <img src="noinyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
+        <p class="image-caption">Gráfico de f(x) = x²</p>
+        <p2>Esta función <strong>no es inyectiva</strong> porque existen 2 valores de <strong>x</strong> en el dominio para un solo elemento <strong>y</strong> de la imagen.</p2>
+        <lu>
+          <li>f (-2) = (-2)<sup>2</sup> = 4 </li>
+          <li>f (2) = ( 2 )<sup>2</sup> = 4</li>
+        </lu>
       </div>
       <div class="image-container">
-       <img src="funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
-        <p class="image-caption">Gráfico de f(x) = 2x (Inyectiva)</p>
+       <img src="funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: 265px;">
+        <p class="image-caption">Gráfico de f(x) = x </p>
+        <p2>La función identidad es inyectiva, ya que enviará cada x a un solo y .</p2>
+        <lu>
+          <li>f (1)  = 1</li>
+          <li>f (2) = 2 </li>
+        </lu>
       </div>
     </div>
   </div>
