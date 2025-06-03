@@ -306,30 +306,34 @@ La condición implica demostrar que \(dom (f) = img (f)\)</p>
  <div class="math-example">
   <h3 class="example-title">Función par</h3>
    <div class="math-info-box">
-    <p><strong>Definición:</strong> Una función se dice que es par cuando tiene simétria con respecto al eje y, en palabras más coloquiales si pudieramos doblar el plano cartesiano como una hoja de papel siendo el eje y la linea marcada, la función empalmaria exactamente </p>
+    <p><strong>Definición:</strong> Una función se dice que es par cuando tiene simétria con respecto al eje \(y\), en palabras más coloquiales si pudieramos doblar el plano cartesiano como una hoja de papel siendo el eje \(y\) la linea marcada, la función empalmaria exactamente </p>
   </div>
    <div class="image-container">
    <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
 </div>
-<p>Proceso para verificar inyectividad<br>
-La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x = y.\)</p>
+<p>Debera cumplir la condición: \(f(x) = f(-x)\) para cualquier \(x\) en el dominio. El nombre proviene de las potencias par de \(x\) es decir \(x^2,x^4,x^6...\) que son funciones pares. Supongamos por ejemplo que queremos corroborar que \(f(x) = x^4\) es par. \[¿f(x) = f(-x)?\]<br>
+Comenzaremos evaluando:
+\begin{align*}
+f(-x) &= (-x)^4 && \text{(Aplicando la definición)} \\
+&= x^4 && \text{(Simplificando)} \\
+&= f(x) && \text{(Por definición de f)}\\
+& \therefore \text{es par}
+\end{align*}
 
-  <p>Consideremos las siguientes funciones por ejemplo:</p>
-  <div class="image-comparison">
-    <div class="image-pair">
-      <div class="image-container">
-        <img src="img_funciones/noinyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
-        <p class="image-caption">Gráfico de \(f(x) = x^2\)</p>
-        <p2></p2>
-      </div>
-      <div class="image-container">
-       <img src="img_funciones/funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: 265px;">
-        <p class="image-caption">Gráfico de \(f(x) = x\) </p>
-        <p2>La función identidad es inyectiva, ya que enviará cada \(x\) a un solo \(y\).</p2>
-      
-      </div>
-    </div>
+</div>
+
+   <div class="math-example">
+  <h3 class="example-title">Función impar</h3>
+   <div class="math-info-box">
+    <p><strong>Definición:</strong> Una función impar es aquella que tiene simétria central tambien llamada aveces "simétrica con respecto al origen \((0,0)\)". ¡Se ve igual si lo pones boca abajo!
+(... o si lo miras desde dos direcciones opuestas)</p>
   </div>
+   <div class="image-container">
+   <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+</div>
+<p>Debera cumplir la condición: \(f(x) = f(-x)\) para cualquier \(x\) en el dominio. El nombre proviene de las potencias par de \(x\) es decir \(x^2,x^4,x^6...\) que son funciones pares. Supongamos por ejemplo que queremos corroborar que \(f(x) = x^4\) es par. \[¿f(x) = f(-x)?\]<br>
+Comenzaremos evaluando, sabemos que el dom \((f)=\) img \((f)=\) todos los reales, entonces podemos evaluar cualquier número:
+\[f(2) = (2)^4 = 16 \qquad f(-2) = (-2)^4 = 16 \; \checkmark\]  \[f(3) = (3)^4 = 16 \qquad  f(-3) = (-3)^4 = 16 \; \checkmark\] \[f(x) = (x)^4 = x^4  \qquad f(-x) = (-x)^4 = x^4 \; \checkmark\] la potencia par siempre convertira el signo negativo en positivo por la ley de los signos.</p>
     </div>
 
 
