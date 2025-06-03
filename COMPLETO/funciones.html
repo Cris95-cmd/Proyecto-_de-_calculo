@@ -69,7 +69,7 @@
             <a href="#tema3-1" class="sidebar-subtopic">3.1 Dominio y Rango</a>
             <a href="#tema3-2" class="sidebar-subtopic">3.2 Raices</a>
             <a href="#tema3-3" class="sidebar-subtopic">3.3 Inyectividad, Supra y Biyectividad</a>
-            <a href="#tema3-4" class="sidebar-subtopic">3.4 Simétria</a>
+            <a href="#tema3-4" class="sidebar-subtopic">3.4 Par o Impar</a>
             <a href="#tema3-5" class="sidebar-subtopic">3.5 Monotonía</a>
             <a href="#tema3-6" class="sidebar-subtopic">3.6 Composición de funciones</a>
             <a href="#tema3-7" class="sidebar-subtopic">3.7 Inversa de funciones</a>
@@ -182,7 +182,7 @@
   <div class="math-example">
   <h3 class="example-title">Inyectividad</h3>
    <div class="math-info-box">
-    <p><strong>Definición:</strong> Una función \(f(x)) es inyectiva (uno a uno) si cada elemento del rango (conjunto B) proviene de un único elemento del dominio (conjunto A), es otras palabras; no hay dos elementos del dominio que tengan la misma imagen.</p>
+    <p><strong>Definición:</strong> Una función \(f(x)\) es inyectiva (uno a uno) si cada elemento del rango (conjunto B) proviene de un único elemento del dominio (conjunto A), es otras palabras; no hay dos elementos del dominio que tengan la misma imagen.</p>
   </div>
    <div class="image-container">
    <img src="img_funciones/ConjuntosINYEC.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
@@ -206,24 +206,17 @@ La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x
       </div>
     </div>
   </div>
-  </div>
+    </div>
+
   <div class="math-example">
   <h3 class="example-title">Sobreyectividad</h3>
   <div class="math-info-box">
     <p><strong>Definición:</strong> Se dice que una función es suprayectiva, sobreyectiva o exhaustiva cuando el dominio (conjunto A) y rango (conjunto B) coinciden, no sobran elementos. Más formalmente todo elemento \(y\) (imagen) tiene al menos un elemento \(x\) (dominio) que le corresponde. </p>
   </div>
-  <div class="image-container">
-   <img src="funcion_suprayectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
-</div>
-  <p>Consideremos la función lineal:</p>
-    \(f(x) = x+1\)
-  <p>Esta función <strong>es sobreyectiva</strong> porque para cualquier número real y, siempre existe un número real x. Su dominio y rango son los &#8477;, sin restricciones. Dom ( ƒ ) = &#8477; es igual al Rang ( ƒ ) = &#8477; </p>
-   
-  <p>Consideremos la función exponencial:</p>
-  <div class="function-display">
-    f(x) = Sen (x)
-  </div>
-  <p>Esta función <strong> no es sobreyectiva</strong> porque su dominio es todos los &#8477; pero su rango solamente toma valores entre 1 y -1. Dom ( ƒ ) = &#8477; es diferente al Rang ( ƒ ) = [-1,1].</p>
+  <img src="img_funciones/funcion_suprayectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+  
+ <p>Proceso para verificar suprayectividad:<br>
+La condición implica demostrar que \(dom (f) = img (f)\)</p>
   <div class="image-comparison"> 
     <div class="image-pair">
       <div class="image-container">
@@ -237,27 +230,19 @@ La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x
     </div>
   </div>
   </div>
+  
   <div class="math-example">
   <h3 class="example-title">Biyectividad</h3>
   <div class="math-info-box">
-    <p><strong>Definición:</strong>Una función biyectiva es simplemente aquella que es inyectiva y suprayectiva a la vez, es decir, es de uno a uno, tiene el mismo dominio y rango (no sobran elementos).</p>
+    <p><strong>Definición:</strong> Una función biyectiva es simplemente aquella que es inyectiva y suprayectiva a la vez, es decir, es de uno a uno y tiene el mismo dominio y rango (no sobran elementos).</p>
   </div>
-  <p>Consideremos la función :</p>
-  <div class="function-display">
-    f(x) = &#8730;1-x
-  </div>
-  <p>Esta función <strong>es biyectiva.</strong> Sabemos que la raíz no puede contener valores negativos por lo que el Dom ( ƒ ) = [ 0 , ∞] </p>
-   
-  <p>Consideremos la función exponencial:</p>
-  <div class="function-display">
-    f(x) = Sen (x)
-  </div>
-  <p>Esta función <strong> no es sobreyectiva</strong> porque su dominio es todos los &#8477; pero su rango solamente toma valores entre 1 y -1.</p>
+   <img src="img_funciones/funcion_biyectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+  
   <div class="image-comparison">
     <div class="image-pair">
       <div class="image-container">
         <img src="images/funcion-cuadratica.png" alt="Gráfico de función cuadrática" class="math-topic-media">
-        <p class="image-caption">Gráfico de f(x) = x² (No inyectiva)</p>
+        <p2 class="image-caption">Gráfico de f(x) = x² (No inyectiva)</p2>
       </div>
       <div class="image-container">
         <img src="images/funcion-lineal.png" alt="Gráfico de función lineal inyectiva" class="math-topic-media">
@@ -266,12 +251,41 @@ La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x
     </div>
   </div>
   </div>
+
   
 
           
           <!-- Subtema 3.4 -->
-          <h3 id="tema3-4">3.4 Simétria</h3>
-          <p>Para operar con radicales es necesario que tengan el mismo índice...</p>
+          <h3 id="tema3-4">3.4 Par o Impar</h3>
+ <div class="math-example">
+  <h3 class="example-title">Función par</h3>
+   <div class="math-info-box">
+    <p><strong>Definición:</strong> Una función se dice que es par cuando tiene simétria con respecto al eje y, en palabras más coloquiales si pudieramos doblar el plano cartesiano como una hoja de papel siendo el eje y la linea marcada, la función empalmaria exactamente </p>
+  </div>
+   <div class="image-container">
+   <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+</div>
+<p>Proceso para verificar inyectividad<br>
+La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x = y.\)</p>
+
+  <p>Consideremos las siguientes funciones por ejemplo:</p>
+  <div class="image-comparison">
+    <div class="image-pair">
+      <div class="image-container">
+        <img src="img_funciones/noinyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
+        <p class="image-caption">Gráfico de \(f(x) = x^2\)</p>
+        <p2></p2>
+      </div>
+      <div class="image-container">
+       <img src="img_funciones/funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: 265px;">
+        <p class="image-caption">Gráfico de \(f(x) = x\) </p>
+        <p2>La función identidad es inyectiva, ya que enviará cada \(x\) a un solo \(y\).</p2>
+      
+      </div>
+    </div>
+  </div>
+    </div>
+
 
           <!-- Subtema 3.5 -->
           <h3 id="tema3-5">3.5 Monotonía</h3>
