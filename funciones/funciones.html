@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="cursos.css">
   <link rel="stylesheet" href="curso-prec.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script  type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <!-- Partículas de fondo -->
@@ -104,19 +104,16 @@
             
             <!-- Subtema 1.1 -->
             <h3 id="tema1-1">1.1 Concepto y notación</h3>
-            <p>Una función "f" es una regla de correspondencia, es decir, asocia a cada objeto x
-            en un conjunto un único valor $f(x)$ de un segundo conjunto.</p>
+            <p>Una función \(f\) es una regla de correspondencia, es decir, asocia a cada objeto \(x\)
+            en un conjunto un único valor \(f(x)\) de un segundo conjunto.</p>
             <h4>Notación funcional</h4>
-            <p2>Una sola letra como f (o g o F) se utiliza para nombrar una
-            función. Entonces f(x), que se lee “f de x” o “f en x”, denota el valor que f asigna a x.
-            Por lo tanto, si f(x) = x<sup>3</sup> - 4, entonces</p2>
+            <p2>Una sola letra como \(f\) (ó \(g\) ó \(F)\) se utiliza para nombrar una
+            función. Entonces \(f(x)\), que se lee \(f\) de \(x\) o \(f\) en \(x\), denota el valor que \(f\) asigna a \(x\).
+            Por lo tanto, si \(f(x) = x^3 - 4\), entonces</p2>
 
-            <ul>
-              <li>f(2) = 2<sup>3</sup> - 4 = 8 - 4 = 4</li>
-              <li>f(a) = a<sup>3</sup> - 4</li>
-              <li>f(a+h) = (a+h)<sup>3</sup> - 4 = a<sup>3</sup> + 3a<sup>2</sup>h + 3ah<sup>2</sup> + h<sup>3</sup> - 4</li>
-            </ul>
-
+            <p>\[f(2) = 2^{3} - 4 = 8 - 4 = 4\]
+               \[f(a) = a^{3} - 4\]
+               \[f(a+h) = (a+h)^{3} - 4 = \underbrace{a^{3} + 3a^{2}h + 3ah^{2} + h^{3}}_{\text{Desarrollo de } (a+h)^3} - 4\]</p>
 
             <video controls class="math-topic-media">
               <source src="videos/polinomios.mp4" type="video/mp4">
@@ -185,36 +182,27 @@
   <div class="math-example">
   <h3 class="example-title">Inyectividad</h3>
    <div class="math-info-box">
-    <p><strong>Definición:</strong> Una función es inyectiva (uno a uno) si cada elemento del rango proviene de un único elemento del dominio, es otras palabras; no hay dos elementos del dominio que tengan la misma imagen.</p>
+    <p><strong>Definición:</strong> Una función \(f(x)) es inyectiva (uno a uno) si cada elemento del rango (conjunto B) proviene de un único elemento del dominio (conjunto A), es otras palabras; no hay dos elementos del dominio que tengan la misma imagen.</p>
   </div>
    <div class="image-container">
    <img src="ConjuntosINYEC.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
 </div>
-<p>Proceso para verificar inyectividad</p>
-La condición algebraica implica demostrar que si 
-<div class="function-display">
-    f(x) = f(y), entonces x = y. 
-  </div>
+<p>Proceso para verificar inyectividad<br>
+La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x = y.\)</p>
+
   <p>Consideremos las siguientes funciones por ejemplo:</p>
   <div class="image-comparison">
     <div class="image-pair">
       <div class="image-container">
         <img src="noinyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
-        <p class="image-caption">Gráfico de f(x) = x²</p>
-        <p2>Esta función <strong>no es inyectiva</strong> porque existen 2 valores de <strong>x</strong> en el dominio para un solo elemento <strong>y</strong> de la imagen.</p2>
-        <lu>
-          <li>f (-2) = (-2)<sup>2</sup> = 4 </li>
-          <li>f (2) = ( 2 )<sup>2</sup> = 4</li>
-        </lu>
+        <p class="image-caption">Gráfico de \(f(x) = x^2\)</p>
+        <p2></p2>
       </div>
       <div class="image-container">
        <img src="funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: 265px;">
-        <p class="image-caption">Gráfico de f(x) = x </p>
-        <p2>La función identidad es inyectiva, ya que enviará cada x a un solo y .</p2>
-        <lu>
-          <li>f (1)  = 1</li>
-          <li>f (2) = 2 </li>
-        </lu>
+        <p class="image-caption">Gráfico de \(f(x) = x\) </p>
+        <p2>La función identidad es inyectiva, ya que enviará cada \(x\) a un solo \(y\).</p2>
+      
       </div>
     </div>
   </div>
@@ -222,12 +210,13 @@ La condición algebraica implica demostrar que si
   <div class="math-example">
   <h3 class="example-title">Sobreyectividad</h3>
   <div class="math-info-box">
-    <p><strong>Definición:</strong> Se dice que una función es suprayectiva, sobreyectiva o exhaustiva cuando el dominio y rango coinciden, no sobran elementos. Más formalmente todo elemnto de y (imagen) tiene al menos un elemento x (dominio) que le corresponde. </p>
+    <p><strong>Definición:</strong> Se dice que una función es suprayectiva, sobreyectiva o exhaustiva cuando el dominio (conjunto A) y rango (conjunto B) coinciden, no sobran elementos. Más formalmente todo elemento \(y\) (imagen) tiene al menos un elemento \(x\) (dominio) que le corresponde. </p>
   </div>
+  <div class="image-container">
+   <img src="funcion_suprayectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+</div>
   <p>Consideremos la función lineal:</p>
-  <div class="function-display">
-    f(x) = x+1
-  </div>
+    \(f(x) = x+1\)
   <p>Esta función <strong>es sobreyectiva</strong> porque para cualquier número real y, siempre existe un número real x. Su dominio y rango son los &#8477;, sin restricciones. Dom ( ƒ ) = &#8477; es igual al Rang ( ƒ ) = &#8477; </p>
    
   <p>Consideremos la función exponencial:</p>
