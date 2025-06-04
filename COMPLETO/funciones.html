@@ -310,7 +310,7 @@ La condición implica demostrar que \(dom (f) = img (f)\)</p>
   </div>
    <div class="image-container">
    <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
-</div>
+   </div>
 <p>Debera cumplir la condición: \(f(x) = f(-x)\) para cualquier \(x\) en el dominio. El nombre proviene de las potencias par de \(x\) es decir \(x^2,x^4,x^6...\) que son funciones pares. Supongamos por ejemplo que queremos corroborar que \(f(x) = x^4\) es par. \[¿f(x) = f(-x)?\]<br>
 Comenzaremos evaluando:
 \begin{align*}
@@ -319,6 +319,7 @@ f(-x) &= (-x)^4 && \text{(Aplicando la definición)} \\
 &= f(x) && \text{(Por definición de f)}\\
 & \therefore \text{es par}
 \end{align*}
+<p3>Nota: Que una función tenga un exponente par no garantiza que sea par.</p3>
 
 </div>
 
@@ -331,19 +332,33 @@ f(-x) &= (-x)^4 && \text{(Aplicando la definición)} \\
    <div class="image-container">
    <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
 </div>
-<p>Debera cumplir la condición: \(f(x) = f(-x)\) para cualquier \(x\) en el dominio. El nombre proviene de las potencias par de \(x\) es decir \(x^2,x^4,x^6...\) que son funciones pares. Supongamos por ejemplo que queremos corroborar que \(f(x) = x^4\) es par. \[¿f(x) = f(-x)?\]<br>
-Comenzaremos evaluando, sabemos que el dom \((f)=\) img \((f)=\) todos los reales, entonces podemos evaluar cualquier número:
-\[f(2) = (2)^4 = 16 \qquad f(-2) = (-2)^4 = 16 \; \checkmark\]  \[f(3) = (3)^4 = 16 \qquad  f(-3) = (-3)^4 = 16 \; \checkmark\] \[f(x) = (x)^4 = x^4  \qquad f(-x) = (-x)^4 = x^4 \; \checkmark\] la potencia par siempre convertira el signo negativo en positivo por la ley de los signos.</p>
+<p>Se llaman impares porque las funciones con exponentes impares (\(x, x^3, x^5, x^7,...)\) se comportan asi. Bastara demostrar que \(f(-x) = - f (x)\).<br>
+Por ejemplo queremos corroborar que \(f(x) = x ^3\) es impar:
+\begin{align*}
+f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
+&= -x^3 && \text{(Simplificando)} \\
+&= - f(x) && \text{(Por definición de f)}\\
+& \therefore \text{es impar}
+\end{align*}
+</p>
     </div>
 
 
           <!-- Subtema 3.5 -->
           <h3 id="tema3-5">3.5 Monotonía</h3>
-          <p>Para operar con radicales es necesario que tengan el mismo índice...</p>
+        <div class="math-example">
+  <h3 class="example-title">Máximos y mínimos</h3>
+   <div class="math-info-box">
+    <p><strong>Teorema de existencia de máximo y mínimo:</strong> Si \(f(x)\) es continua en un intervalo \([a,b]\), entonces \(f\) alcanza un valor máximo y un valor mínimo en ese intervalo.</p>
+  </div>
+<p>Seguro habras notado en algunas gráficas intervalos donde la función comienza a crecer, alcanza un punto máximo y decrece o por el contrario intervalos donde la función comienza a decrecer, alcanza un punto mínimo y crece nuevamente. A estos puntos \(c\) los llamaremos puntos criticos.  </p>
+
+</div>
         
           <!-- Subtema 3.6 -->
           <h3 id="tema3-6">3.6 Composición de funciones</h3>
-          <p>Para operar con radicales es necesario que tengan el mismo índice...</p>
+              <h3 id="tema4-2">4.2 Reflexiones respecto a ejes</h3>
+          <p>Los radicales son expresiones que contienen raíces de cualquier orden...</p>
         
           <!-- Subtema 3.7 -->
           <h3 id="tema3-7">3.7 Inversa de funciones</h3>
@@ -352,14 +367,34 @@ Comenzaremos evaluando, sabemos que el dom \((f)=\) img \((f)=\) todos los reale
         </div>
 
 
-         <div class="math-topic" id="tema4">
+  <div class="math-topic" id="tema4">
           <h2>4. Transformación de funciones</h2>
-          <p>Definiciones, propiedades y aplicaciones.</p>
-          <img src="potencias.png" alt="Imagen de potencias y raíces" class="math-topic-media">
-          
           <!-- Subtema 4.1 -->
-          <h3 id="tema4-1">4.1 Traslaciones</h3>
-          <p>Las potencias siguen reglas como producto de potencias de igual base...</p>
+          <h3 id="tema4-1">4.1 Traslación de funciones</h3>
+  <div class="math-example">
+     <div class="math-info-box">
+      <p><strong>Definición:</strong>Trasladar una función dentro del plano cartesiano significa desplazarla vertical
+        u horizontalmente sin alterar la forma u orientación de la función, aunque si cambiaremos su dominio y rango.</p>
+     </div>
+     <p2>Comencencemos entendiendo los traslados verticales. Podemos desplazar nuestra función hacia arriba o abajo respecto a el eje \(y\)</p2>
+     <lu>
+      <li>\(\uparrow\) para subirla sumamos un escalar \(k\) a la función: \(f(x) + k\)</li>
+      <li>\(\downarrow\) para bajarla restamos un escalar \(k\) a la función: \(f(x) - k\)</li>
+     </lu>
+  <div class="image-container">
+   <img src="img_funciones/trasla-vertical.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+  </div>
+  <br>
+     <p3>Los traslados horizontales en cambio funcionarán un poco diferente, tendremos que sumar o restar el valor 
+      \(k\) directo a la variable x, es decir:</p3>
+     <lu>
+      <li>\(\rightarrow\) moverla a la derecha restamos el valor \(k\): \(f(x-k)\)</li>
+      <li>\(\leftarrow\) moverla a la izquierda sumamos el valor \(k\): \(f(x+k)\)</li>
+     </lu>
+     <div class="image-container">
+   <img src="img_funciones/trasla-horizontal.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+     </div>
+         
           
           <!-- Subtema 4.2 -->
           <h3 id="tema4-2">4.2 Reflexiones respecto a ejes</h3>
@@ -369,10 +404,10 @@ Comenzaremos evaluando, sabemos que el dom \((f)=\) img \((f)=\) todos los reale
           <h3 id="tema4-3">4.3 Estiramientos y compresiones</h3>
           <p>Los radicales pueden simplificarse extrayendo factores del radicando...</p>
           
-        </div>
-      </div>
-    </div>
   </div>
+  </div>
+</div>
+</div>
 
   <!-- Script para partículas -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
