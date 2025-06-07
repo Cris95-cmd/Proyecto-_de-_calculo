@@ -9,6 +9,7 @@ def generar_grafica_animada():
     colors = {
         'purple': '#9d50bb',
         'gold': '#ffd700',
+        
         'light': '#f0e6ff',
         'dark': '#121212',
         'cyan': '#00ffff',
