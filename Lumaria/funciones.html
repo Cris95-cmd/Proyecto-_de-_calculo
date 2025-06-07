@@ -310,14 +310,13 @@
         
         <div class="math-topic" id="tema3">
           <h2>3. Propiedades</h2>
-
-          <div class="math-example">
           
           <!-- Subtema 3.1 -->
           <h3 id="tema3-1">3.1 Dominio y Rango de una función </h3>
           <p>Ya sabiendo lo que se aprendio en la seccion 1.3 vamos a analizar algunos casos de dominios y rangos de algunas funciones especificas</p>
 
-          <h4>Raices</h4>
+          <div class="math-example">
+          <h3 class="example-title">Raices Cuadradas</h3>
           <p>Cuando nuestra funcion sea una raíz cuadrada del tipo \(f(x) = \sqrt{x}\) debemos tener en cuenta que por como funciona una raíz cuadrada 
             se puede definir como un numero que al multiplicarse por si mismo, resulta el numero original. O en otras palabras, si \(a\) es la raiz cuadrada de 
             \(b\) (\(\sqrt{b} = a\)) es por que \(a \cdot a = b\).
@@ -328,14 +327,74 @@
              <br><br>
              Dicho esto podemos analizar que en la funcion \(f(x) = \sqrt{x}\), va a ser imposible que x sea negativa, lo que quiere decir que 
              mi funcion solo puede recibir valores positivos, o dicho de otra manera, el dominio de \(f(x)\) son todos los reales positivos
-             \(Dom(f) = \Re^{+}\)
-
+             \(Dom(f) = \Re^{+}\) o escrito de otra forma  \(Dom(f) = [0,\infty) \).
+             <br><br>
+             Por otro lado, una vez conocido el dominio, podremos saber su rango, ya que si nuestro dominio de \(f(x) = \sqrt{x}\) solo es positivo
+             entonces su rango tambien sera positivo, ya que para todo valor positivo del dominio le correspondera un valor
+             tambien positivo en el rango \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
           </p>
+           <h4>Ejemplo</h4>
+           <p>\(f(x) = \sqrt{x-1}\)<br>
+            Ya que la raiz no puede operar un valor negativo podemos ver que \(x-1\) es negativo en todos los valores
+            menores que \(x=1\), entonces el dominio \(Dom(f)=[1,\infty)\). <br>Para su rango ya que cuando \(x=1\)
+            , \(f(1) = \sqrt{1-1} = \sqrt{0} = 0\), a partir de \(x=1\) los valores de \(f(x)\) seran negativos, lo que quiere decir que su rango
+              sera \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
+              </p>
           </div>
+            <div class="math-example">
+              <h3 class="example-title">Fracciones</h3>
+              <p>Cuando se nos presenta una funcion del tipo \(f(x) = \frac{1}{x}\), hay que dejar en claro que
+                la división \(\frac{1}{0}\) es una indeterminación en las matematicas, ya que la división se define 
+                como \(\frac{a}{b} = c\) tal que \(c \cdot b = a\), esto quiere decir que para \(b=0\) entonces \(c \cdot 0 = a\)
+                lo cual es estrictamente \(0\), pero sabemos que \(a \neq 0\) lo que quiere decir que no cumple con el criterio de la división.
+
+              <br><br>
+              Esto queire decir que el dominio de la funcion \(f(x) = \frac{1}{x}\) seran todos los valores de \(x\) excepto cuando
+              \(x=0\), entonces el dominio de \(f(x)\) son todos los reales menos el \(0\), \(Dom(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Dom(f) = (-\infty,0) \cup (0,\infty)\)
+              <br><br>
+              Para el rango de \(f(x)\) resultaria mas facil usando la funcion inversa, pero esta se enseñara hasta la seccion 3.7 del presente capitulo
+              . Por ahora diremos que \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Ran(f) = (-\infty,0) \cup (0,\infty)\), el rango excluye al \(0\) debido a que la unica forma de que una fracción sea igual a 0
+              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x}\).
+              </p>
+              <h4>Ejemplo</h4>
+              <p>
+                \(f(x) = \frac{1}{x+1}\)<br>
+                para saber el dominio de esta función debemos ver cuando el denominador sera \(0\), es decir, cuando 
+                \(x+1 = 0\), usando algebra tendremos que cuando \(x=-1\) sucede que \(x+1 = 0\), hecho esto podemos decir 
+                que el \(Dom(f) = \Re \setminus \{-1\}\) o \(Dom(f) = (-\infty,-1) \cup (-1,\infty)\). <br>
+                Para el rango debido a que la unica forma de que una fracción sea igual a 0
+              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x+1}\) entonces el rango es 
+              \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Ran(f) = (-\infty,0) \cup (0,\infty)\).
+              </p>
+          </div>
+
+          
           <!-- Subtema 3.2 -->
           <h3 id="tema3-2">3.2 Raices</h3>
-          <p>Los radicales son expresiones que contienen raíces de cualquier orden...</p>
+          <div class="math-example">
+          <p>Las raíces de una función \(y = f(x)\) son los valores \(x\) en los cuales \(f(x)\) se hace \(0\). En algunos casos, la función \(f\) tiene una forma tal que el problema se puede resolver algebraicamente. Es el caso de los polinomios de grado 2, e incluso los polinomios de grado 3 y 4. Sin embargo, en la mayoría de los casos, el problema sólo tiene solución numérica.
+          Esto significa que hay que usar el computador para encontrar los valores numéricos de las raíces. No es posible, encontrar una fórmula algebraica que entregue las soluciones, en esta seccion solo se presentaran casos en donde la raiz tiene una solucion algebraica.</p>
+
+          <h4>Calculo de la raíz de una función</h4>
+          <p>Como se dijo, el la raíz de una funcion son los valores en donde \(f(x) = 0\) o en lo que se presentara en la grafica
+            es el punto en donde la grafica de una funcion toca el eje de las \(x\), es decir, \(y = 0\).
+            <br><br>
+            Tomemos como ejemplo la funcion \(f(x) = x\sup{3} - x\), para encontrar las raices de esta funcion debemos igualar 
+            la funcion a \(0\) y encontar los valores para los que \(x\) va a ser solución 
+            \begin{align*}
+              0 &= x^3 - x && \text{(Igualando la funcion a 0)} \\
+              0 &= x(x^2 - 1) && \text{(Factorizando x)} \\
+              0 &= x(x + 1)(x - 1) && \text{(Separando en diferencia de cuadrados)} \\              
+              & \therefore \text{Las raíces de f(x) son en x=0,-1,1}
+              \end{align*}
+
+          </p>
+
           
+          </div>
           <!-- Subtema 3.3 -->
           <h3 id="tema3-3">3.3 Inyectividad, Suprayectividad y Biyectividad</h3>
          
