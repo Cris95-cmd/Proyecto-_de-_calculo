@@ -172,7 +172,7 @@
               </div>
               </center>
               <br>
-              <iframe src="https://www.geogebra.org/calculator/abcg9vfh?embed" width="725" height="500" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+              <!--<iframe src="https://www.geogebra.org/calculator/abcg9vfh?embed" width="725" height="500" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe> -->
             </div>
             
             <div class="math-example">
@@ -310,11 +310,28 @@
         
         <div class="math-topic" id="tema3">
           <h2>3. Propiedades</h2>
+
+          <div class="math-example">
           
           <!-- Subtema 3.1 -->
           <h3 id="tema3-1">3.1 Dominio y Rango de una función </h3>
-          <p>Las potencias siguen reglas como producto de potencias de igual base...</p>
-          
+          <p>Ya sabiendo lo que se aprendio en la seccion 1.3 vamos a analizar algunos casos de dominios y rangos de algunas funciones especificas</p>
+
+          <h4>Raices</h4>
+          <p>Cuando nuestra funcion sea una raíz cuadrada del tipo \(f(x) = \sqrt{x}\) debemos tener en cuenta que por como funciona una raíz cuadrada 
+            se puede definir como un numero que al multiplicarse por si mismo, resulta el numero original. O en otras palabras, si \(a\) es la raiz cuadrada de 
+            \(b\) (\(\sqrt{b} = a\)) es por que \(a \cdot a = b\).
+            <br>
+            <br>
+             Como podemos ver, \(b\) siempre tendra un signo positivo, ya que por ley de signos si su raíz es negativa \(-a\) entonces \((-a) \cdot (-a)\) tendra un resultado positivo.
+             Se puede decir que \((-a) \cdot (-a) = a \cdot a = b\).  
+             <br><br>
+             Dicho esto podemos analizar que en la funcion \(f(x) = \sqrt{x}\), va a ser imposible que x sea negativa, lo que quiere decir que 
+             mi funcion solo puede recibir valores positivos, o dicho de otra manera, el dominio de \(f(x)\) son todos los reales positivos
+             \(Dom(f) = \Re^{+}\)
+
+          </p>
+          </div>
           <!-- Subtema 3.2 -->
           <h3 id="tema3-2">3.2 Raices</h3>
           <p>Los radicales son expresiones que contienen raíces de cualquier orden...</p>
@@ -463,46 +480,65 @@ f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
         
         </div>
 
-
   <div class="math-topic" id="tema4">
           <h2>4. Transformación de funciones</h2>
           <!-- Subtema 4.1 -->
           <h3 id="tema4-1">4.1 Traslación de funciones</h3>
-  <div class="math-example">
+   <div class="math-example">
      <div class="math-info-box">
       <p><strong>Definición:</strong>Trasladar una función dentro del plano cartesiano significa desplazarla vertical
         u horizontalmente sin alterar la forma u orientación de la función, aunque si cambiaremos su dominio y rango.</p>
      </div>
      <p2>Comencencemos entendiendo los traslados verticales. Podemos desplazar nuestra función hacia arriba o abajo respecto a el eje \(y\)</p2>
+     <br>
+     <br>
      <lu>
       <li>\(\uparrow\) para subirla sumamos un escalar \(k\) a la función: \(f(x) + k\)</li>
       <li>\(\downarrow\) para bajarla restamos un escalar \(k\) a la función: \(f(x) - k\)</li>
      </lu>
+     <br>
   <div class="image-container">
    <img src="img_funciones/trasla-vertical.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
   </div>
   <br>
      <p3>Los traslados horizontales en cambio funcionarán un poco diferente, tendremos que sumar o restar el valor 
-      \(k\) directo a la variable x, es decir:</p3>
+      \(k\) directo a la variable \(x\), es decir:</p3>
+      <br>
+      <br>
      <lu>
-      <li>\(\rightarrow\) moverla a la derecha restamos el valor \(k\): \(f(x-k)\)</li>
-      <li>\(\leftarrow\) moverla a la izquierda sumamos el valor \(k\): \(f(x+k)\)</li>
+      <li>\(\rightarrow\) moverla a la derecha restamos el valor \(k\) : \(f(x-k)\)</li>
+      <li>\(\leftarrow\) moverla a la izquierda sumamos el valor \(k\) : \(f(x+k)\)</li>
      </lu>
+     <br>
      <div class="image-container">
    <img src="img_funciones/trasla-horizontal.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
      </div>
-         
+   </div>  
           
           <!-- Subtema 4.2 -->
           <h3 id="tema4-2">4.2 Reflexiones respecto a ejes</h3>
-          <p>Los radicales son expresiones que contienen raíces de cualquier orden...</p>
+          <div class="math-example">
+       <div class="math-info-box">
+      <p><strong>Definición:</strong> La reflexión de una función respecto a un eje implica crear una imagen espejo de 
+        la gráfica original, utilizando el eje como referencia. La reflexión respecto al eje \(x\) se obtiene cambiando el 
+      signo de la función \(y = - f(x)\), mientras que la reflexión respecto al eje y se obtiene cambiando el signo de la
+         variable independiente \(y=f(-x)\). </p>
+     </div>
+          </div>
           
           <!-- Subtema 4.3 -->
           <h3 id="tema4-3">4.3 Estiramientos y compresiones</h3>
-          <p>Los radicales pueden simplificarse extrayendo factores del radicando...</p>
-          
+          <div class="math-example">
+          <h4 class="example-title">Estiramiendo o compresión vertical</h4>
+           <div class="math-info-box">
+      <p><strong>Definición:</strong> Dada una función  \(f(x)\), una nueva función  \(g(x) = a f(x)\), donde \(a\) es una 
+        constante, es un estiramiento vertical o compresión vertical de la función  \(f(x)\). Donde la constante \(a\) hace más ancha o más delgada
+      la función.
+    </p>
+     </div>
+          </div>
   </div>
-  </div>
+ 
 </div>
 </div>
 
