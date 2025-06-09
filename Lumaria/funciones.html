@@ -195,17 +195,11 @@
                   </li>
                 </lu>
             </p>
+          </div> 
           </div>
-            <p></p>
-            
-          </div>
-          <!--<div class="math-info-box">
-            <p><strong>Dato útil:</strong><br>Los polinomios se pueden clasificar según su grado.</p>
-          </div>-->
         </div>
         </div>
 
-        
         <div class="math-topic" id="tema2">
           <h2>2. Tipos de funciones</h2>
           <div class="math-example">
@@ -218,8 +212,6 @@
              una función f(x) es algebraica si puede describirse mediante una ecuación polinómica o una combinación de expresiones algebraicas.</p>
             </p>
           </div>
-          
-          
             <p>
               Estas funciones pueden tener diversas formas, entre las que se incluyen las funciones polinómicas (como \(f(x) = 3x^2 + 2x - 5)\),
                las funciones racionales (como \(f(x) = \frac{2x + 1}{x - 3}\)), y las funciones irracionales (como \(f(x) = \sqrt{x + 2}\)).
@@ -350,23 +342,28 @@
 <p>Proceso para verificar inyectividad<br>
 La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x = y.\)</p>
 
-  <p>Consideremos las siguientes funciones por ejemplo:</p>
-  <div class="image-comparison">
-    <div class="image-pair">
-      <div class="image-container">
-        <img src="img_funciones/noinyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: auto;">
-        <p class="image-caption">Gráfico de \(f(x) = x^2\)</p>
-        <p2></p2>
-      </div>
-      <div class="image-container">
-       <img src="img_funciones/funcion_inyectiva.gif" alt="Función no inyectiva f(x) = x²" style="max-width: 100%; height: 265px;">
-        <p class="image-caption">Gráfico de \(f(x) = x\) </p>
-        <p2>La función identidad es inyectiva, ya que enviará cada \(x\) a un solo \(y\).</p2>
-      
-      </div>
-    </div>
+  <p>Consideremos las siguientes funciones como ejemplo:<br>
+    <lu>
+      <li>\(f(x) = x^2\)</li>
+  Entendamos primero que \(f (x) = x^2\) y que \(f (y) = y^2\), la misma función solo que la variable se cambia por \(y\). Como paso \(1\) supongamos que es
+verdad que son iguales y veremos a que resultado llegamos.
+<p>\[f(x) = f(y)\]
+   \[x^2 = y^2\]
+   al aplicar la raíz en ambos lados para simplificar nos quedará:
+   \(\pm x = \pm y\)
+    y cuatro combinaciones posibles: \[+x = +y \quad \checkmark\] \[-x = -y \quad \checkmark\] \[+x = -y \quad \times\] \[-x = +y \quad \times\] por lo tanto la función no es 
+   inyectiva.
+   <br>
+   <li>\(f(x) = 2x + 1\)</li>
+   Procedemos exactamente igual, recuerda: \(f(y) = 2y + 1\) y suponemos
+   \[f(x) = f(y)\]
+   \[2x + 1 = 2y + 1\]
+   \[2x + \cancel{1} = 2y +\cancel{1} \quad \text{simplificamos}\] 
+   \[\cancel{2}x = \cancel{2}y\]
+   \[x = y\] por lo tanto verificamos que si es biyectiva.
+    </lu>
   </div>
-    </div>
+  
 
   <div class="math-example">
   <h3 class="example-title">Sobreyectividad</h3>
@@ -376,40 +373,31 @@ La condición algebraica implica demostrar que si \(f(x) = f(y)\) , entonces \(x
   <img src="img_funciones/funcion_suprayectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
   
  <p>Proceso para verificar suprayectividad:<br>
-La condición implica demostrar que \(dom (f) = img (f)\)</p>
-  <div class="image-comparison"> 
-    <div class="image-pair">
-      <div class="image-container">
-        <img src="images/funcion-cuadratica.png" alt="Gráfico de función cuadrática" class="math-topic-media">
-        <p class="image-caption">Gráfico de f(x) = x² (No inyectiva)</p>
-      </div>
-      <div class="image-container">
-        <img src="images/funcion-lineal.png" alt="Gráfico de función lineal inyectiva" class="math-topic-media">
-        <p class="image-caption">Gráfico de f(x) = 2x (Inyectiva)</p>
-      </div>
-    </div>
-  </div>
+La condición implica demostrar que \(dom (f) = ran (f)\). Recordemos que en la sección 1.3 ya repasamos las bases para 
+dominios y rangos de funciones.<br>
+Observemos unos ejemplos:</p>
+<lu>
+  <li>\(f(x) = x^2\)</li>
+  <p>En la sección de Dominio y Rango de funciones dijimos que el \(Dom (f) = \Re\) y el \(Ran (f) = [0,\infty ^+)\), claramente no 
+    son iguales por lo que la función no es suprayectiva. </p>
+  <li>\(f(x) = x\)</li>
+  <p2>Esta función mejor conocida como "función identidad" es por definición suprayectiva porque su \(Dom (f) = \Re\) y \(Ran (f) = \Re\), son iguales.</p2>
+</lu>
+<br>
+<br>
+<p3>Otra forma alternativa de comprobar suprayectividad dice:<br>
+Una función \(f : X \rightarrow Y\) es suprayectiva si y solo si \(f\) tiene inversa derecha. Pero aun no llegamos a estudiar 
+la sección de contención e inversa de funciones. Más adelante lo comprobaremos utilizando esta herramienta. </p3>
   </div>
   
   <div class="math-example">
   <h3 class="example-title">Biyectividad</h3>
   <div class="math-info-box">
-    <p><strong>Definición:</strong> Una función biyectiva es simplemente aquella que es inyectiva y suprayectiva a la vez, es decir, es de uno a uno y tiene el mismo dominio y rango (no sobran elementos).</p>
+    <p><strong>Definición:</strong> Una función biyectiva es simplemente aquella que es inyectiva y suprayectiva 
+      a la vez, es decir, es de uno a uno y tiene el mismo dominio y rango (no sobran elementos).</p>
   </div>
    <img src="img_funciones/funcion_biyectiva.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
-  
-  <div class="image-comparison">
-    <div class="image-pair">
-      <div class="image-container">
-        <img src="images/funcion-cuadratica.png" alt="Gráfico de función cuadrática" class="math-topic-media">
-        <p2 class="image-caption">Gráfico de f(x) = x² (No inyectiva)</p2>
-      </div>
-      <div class="image-container">
-        <img src="images/funcion-lineal.png" alt="Gráfico de función lineal inyectiva" class="math-topic-media">
-        <p class="image-caption">Gráfico de f(x) = 2x (Inyectiva)</p>
-      </div>
-    </div>
-  </div>
+  <p>Para verificar biyectividad bastara demostar inyectividad y suprayectividad en la función.</p>
   </div>
 
   
@@ -444,7 +432,7 @@ f(-x) &= (-x)^4 && \text{(Aplicando la definición)} \\
 (... o si lo miras desde dos direcciones opuestas)</p>
   </div>
    <div class="image-container">
-   <img src="img_funciones/funcion_par_x2.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+   <img src="img_funciones/funcion_impar.gif" style="display: block; max-width: 50%; height: auto; margin: 0 auto;">
 </div>
 <p>Se llaman impares porque las funciones con exponentes impares (\(x, x^3, x^5, x^7,...)\) se comportan asi. Bastara demostrar que \(f(-x) = - f (x)\).<br>
 Por ejemplo queremos corroborar que \(f(x) = x ^3\) es impar:
@@ -452,8 +440,8 @@ Por ejemplo queremos corroborar que \(f(x) = x ^3\) es impar:
 f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
 &= -x^3 && \text{(Simplificando)} \\
 &= - f(x) && \text{(Por definición de f)}\\
-& \therefore \text{es impar}
 \end{align*}
+verificamos que si es impar.
 </p>
     </div>
           <!-- Subtema 3.5 -->
@@ -464,18 +452,120 @@ f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
     <p><strong>Teorema de existencia de máximo y mínimo:</strong> Si \(f(x)\) es continua en un intervalo \([a,b]\), entonces \(f\) alcanza un valor máximo y un valor mínimo en ese intervalo.</p>
   </div>
 <p>Seguro habras notado en algunas gráficas intervalos donde la función comienza a crecer, alcanza un punto máximo y decrece o por el contrario intervalos donde la función comienza a decrecer, alcanza un punto mínimo y crece nuevamente. A estos puntos \(c\) los llamaremos puntos criticos.  </p>
-
 </div>
         
           <!-- Subtema 3.6 -->
           <h3 id="tema3-6">3.6 Composición de funciones</h3>
-              <h3 id="tema4-2">4.2 Reflexiones respecto a ejes</h3>
-          <p>Los radicales son expresiones que contienen raíces de cualquier orden...</p>
+       <div class="math-example">
+   <div class="math-info-box">
+    <p><strong>Definición:</strong> La composición de una función es una operación que combina dos o más funciones para crear una nueva función.
+    Dadas dos funciones, \(f\) y \(g\), la composición se denota como \(f \circ g\) ó \(f(g(x))\), (\(g\) contenida en \(f\) leida de derecha a izquierda) y se define como:
+ \[(f \circ g)(x) = f(g(x))\]
+Esto significa que primero se aplica la función \(g\) a la entrada \(x\), y luego se aplica la función \(f\) al resultado de \(g(x)\). Y por complemento se aplica el mismo método para
+\[(g \circ f)(x) = g(f(x))\]  </p>
+  </div>
+  <p>Sabemos que es un poco complejo comprenderlo, asi que lo ilustraremos un ejemplos:
+    <lu>
+      <li>Ejemplo 1: \(f (x) = 2x \quad\) y \(\quad g (x) = x^2\)</li>
+      1.\(f \circ g = f (g(x))\): significa que en vez de evaluar un escalar en la función evaluaremos una función completa.
+      \begin{align*}
+      f (x^2) &= 2(x^2)\\
+      &=2x^2\\
+       &\text{nuestra nueva función 1 seria \(2x^2\)}.
+      \end{align*}
+  <br>
+      2.\((g \circ f)(x) = g(f(x))\)
+       \begin{align*}
+      g (2x) &= (2x)^2\\
+      &=4x^2\\
+      &\text{nuestra nueva función 2 seria \(4x^2\)}.
+      \end{align*}
+      <li> Ejemplo 2: \(f (x) = 3x + 2\quad\) y \(\quad g (x) = \frac{x+3}{2x+1}\)</li>
+       1.\(f \circ g = f (g(x))\):
+      \begin{align*}
+      f (\frac{x+3}{2x+1}) &= 3(\frac{x+3}{2x+1}) + 2\\
+                           &= \frac{3x+9}{2x+1} + 2\\
+                           &= \frac{3x+9+2(2x+1)}{2x+1}\\
+                           &= \frac{3x+9+4x+2}{2x+1}\\
+                           &= \frac{7x+11}{2x+1}\\
+                           &\text{nuestra nueva función 1 seria \(\frac{7x+11}{2x+1}\)}.
+      \end{align*}
+       2.\(g \circ f = g (f(x))\):
+      \begin{align*}
+      g (3x) &= \frac{(3x)+3}{2(3x)+1}\\
+             &= \frac{3x+3}{6x+1}\\
+             &\text{nuestra nueva función 2 seria \(\frac{3x+3}{6x+1}\)}.
+      \end{align*}
+    </lu>
+  </p>
+  </div>
         
           <!-- Subtema 3.7 -->
-          <h3 id="tema3-7">3.7 Inversa de funciones</h3>
-          <p>Para operar con radicales es necesario que tengan el mismo índice...</p>
+      <h3 id="tema3-7">3.7 Inversa de funciones</h3>
+         <div class="math-example">
+           <div class="math-info-box">
+               <p><strong>Definición:</strong> Una función \(f\) es invertible si y solo si existe una función \(g\) tal que \(f(g(x)) = x\)
+                 para todo \(x\) en el dominio de \(g\), y \(g(f(x)) = x\) para todo \(x\) en el dominio de \(f\). </p>
+           </div>
+           <p2>Vamos por partes, la inversa de una función \(f(x)\) la podemos denotar como \(f^{-1}(x)\). Solamente si y solo si la función 
+             es biyectiva podremos decir que admite o "tiene" inversa y funcionarán de la siguiente manera:
+             <lu>
+              <li>\(f : Dom (f) \rightarrow Img (f)\)</li>
+              La función tomará un elemento del dominio y regresará uno de la imagen.
+              <br>
+              <li>\(f^{-1}: Img (f) \rightarrow Dom (f)\)</li>
+              Su inversa tomara el elemento de la imagen que \(f(x)\) regreso y nos dará de nuevo el elemento del dominio. Tal como
+              suena es un circulo de entradas y salidas</li>
+            <br>
+            <br>
+              <li>¿Porque es importante que \(f(x)\) sea biyectiva? </li>
+              <p>Biyectiva = Inyectiva + Sobreyectiva \(\rightarrow\) Garantiza que \(f^{-1}(x)\) sea una función (no multivaluada) y esté 
+                definida en toda la imagen. Si \(f(x)\) no es biyectiva, su "inversa" tendría problemas:<br>
+                <br>
+                1. Puede no ser una función dos elementos de la imagen llegarian a una del dominio y eso no es una función (si no es inyectiva).
+                <br>
+                2. Puede no estar definida en toda la imagen, para \(f(x)\) un \(x \rightarrow y\quad\)  pero para \(f^{-1}(y)\) un\(\quad y \rightarrow ?\) podria no tener elemento de regreso (si no es sobreyectiva).
+              <br>
+              <p>Bastaria con demostrar que la función es biyectiva y sabremos que admite inversa y/ó encontrar la inversa y demostrar 
+                que tiene inverso derecho e izquierdo por contención como lo vimos en la sección anterior.<br>
+                \[f(f^{-1}(y)) = y\]
+                \[f^{-1}(f(x))= x \]
+                haciendo un poco de algébra.
+              </p>
+                <li>Ejemplo 1: Proceso para encontar inversa</li>
+              Comencemos prácticando un poco e intentemos demostrar que \(f(x) = x^2\) no admite inversa (recuerda que ya habiamos demostrado
+              que es una función no biyectiva).<br>
+              Paso 1.Despejamos para \(x\).
+              \begin{align*}
+                x^2 &= y\\
+                  x &= \sqrt{y}\\
+          f^{-1}(y) &= \sqrt{y}
+              \end{align*}
+              <br>
+              Paso 2. Verificar inverso derecho por contención de funciones.
+               \begin{align*}
+                f(f^{-1}(y)) &= f (\sqrt{y})\\
+                             &= (\sqrt{y})^2\\
+                             &= y \quad\checkmark
+              \end{align*}
+              
+              <br>
+              <br>
+              Paso 3. Verificar inverso izquierdo.
+              \begin{align*}
+                f^{-1}(f(x)) &= f^{-1}(x^2)\\
+                             &= \sqrt(x^2)\\
+                             &= \left|x\right|\quad \times
+              \end{align*}
+              notese que el valor absoluto de \(x\) no es lo mismo que \(x\). Por lo tanto no tiene inverso izquierdo 
+              lo que implica que no tiene inversa general.
+              </p>
+            </lu>
+
+           </p2>
+         </div>
         </div>
+      </div>
   <div class="math-topic" id="tema4">
           <h2>4. Transformación de funciones</h2>
           <!-- Subtema 4.1 -->
@@ -561,6 +651,14 @@ f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
     <p><strong>Definición:</strong> Dada una función  \(f(x)\), una nueva función  \(g(x)=f(b x)\),donde \(b\) es una constante, 
       es un estiramiento horizontal o una compresión horizontal de la función  \(f(x)\).</p>
    </div>
+   <lu>
+       <li>Si los valores de \(b > 1\), entonces el gráfico se comprimirá por  \(\frac{1}{b}\).</li>
+       <li>Si los valores de  \(0 < b < 1 \), entonces el gráfico se estirará por  \(\frac{1}{b}\).</li>
+       <li>Si \( b < 0 \), entonces habrá una combinación de estiramiento o compresión horizontal con reflexión horizontal.</li>
+  </lu>
+     <div class="image-container">
+        <img src="img_funciones/transformacion_b_negativo.gif" style="display: block; max-width: 80%; height: auto; margin: 0 auto;">
+     </div>
 </div>
   </div>
   </div>
