@@ -204,7 +204,70 @@
                 </lu>
             </p>
           </div> 
+         
+
+
+          <h3 class="example-title">Raices Cuadradas</h3>
+          <p>Cuando nuestra funcion sea una raíz cuadrada del tipo \(f(x) = \sqrt{x}\) debemos tener en cuenta que por como funciona una raíz cuadrada 
+            se puede definir como un numero que al multiplicarse por si mismo, resulta el numero original. O en otras palabras, si \(a\) es la raiz cuadrada de 
+            \(b\) (\(\sqrt{b} = a\)) es por que \(a \cdot a = b\).
+            <br>
+            <br>
+             Como podemos ver, \(b\) siempre tendra un signo positivo, ya que por ley de signos si su raíz es negativa \(-a\) entonces \((-a) \cdot (-a)\) tendra un resultado positivo.
+             Se puede decir que \((-a) \cdot (-a) = a \cdot a = b\).  
+             <br><br>
+             Dicho esto podemos analizar que en la funcion \(f(x) = \sqrt{x}\), va a ser imposible que x sea negativa, lo que quiere decir que 
+             mi funcion solo puede recibir valores positivos, o dicho de otra manera, el dominio de \(f(x)\) son todos los reales positivos
+             \(Dom(f) = \Re^{+}\) o escrito de otra forma  \(Dom(f) = [0,\infty) \).
+             <br><br>
+             Por otro lado, una vez conocido el dominio, podremos saber su rango, ya que si nuestro dominio de \(f(x) = \sqrt{x}\) solo es positivo
+             entonces su rango tambien sera positivo, ya que para todo valor positivo del dominio le correspondera un valor
+             tambien positivo en el rango \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
+          </p>
+           <h4>Ejemplo</h4>
+           <p>\(f(x) = \sqrt{x-1}\)<br>
+            Ya que la raiz no puede operar un valor negativo podemos ver que \(x-1\) es negativo en todos los valores
+            menores que \(x=1\), entonces el dominio \(Dom(f)=[1,\infty)\). <br>Para su rango ya que cuando \(x=1\)
+            , \(f(1) = \sqrt{1-1} = \sqrt{0} = 0\), a partir de \(x=1\) los valores de \(f(x)\) seran negativos, lo que quiere decir que su rango
+              sera \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
+              </p>
+              <div class="image-container">
+   <img src="img_funciones/CALEB_graficas/Grafica_raiz_x-1.png" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+</div>
           </div>
+            <div class="math-example">
+              <h3 class="example-title">Fracciones</h3>
+              <p>Cuando se nos presenta una funcion del tipo \(f(x) = \frac{1}{x}\), hay que dejar en claro que
+                la división \(\frac{1}{0}\) es una indeterminación en las matematicas, ya que la división se define 
+                como \(\frac{a}{b} = c\) tal que \(c \cdot b = a\), esto quiere decir que para \(b=0\) entonces \(c \cdot 0 = a\)
+                lo cual es estrictamente \(0\), pero sabemos que \(a \neq 0\) lo que quiere decir que no cumple con el criterio de la división.
+
+              <br><br>
+              Esto queire decir que el dominio de la funcion \(f(x) = \frac{1}{x}\) seran todos los valores de \(x\) excepto cuando
+              \(x=0\), entonces el dominio de \(f(x)\) son todos los reales menos el \(0\), \(Dom(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Dom(f) = (-\infty,0) \cup (0,\infty)\)
+              <br><br>
+              Para el rango de \(f(x)\) resultaria mas facil usando la funcion inversa, pero esta se enseñara hasta la seccion 3.7 del presente capitulo
+              . Por ahora diremos que \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Ran(f) = (-\infty,0) \cup (0,\infty)\), el rango excluye al \(0\) debido a que la unica forma de que una fracción sea igual a 0
+              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x}\).
+              </p>
+              <h4>Ejemplo</h4>
+              <p>
+                \(f(x) = \frac{1}{x+1}\)<br>
+                para saber el dominio de esta función debemos ver cuando el denominador sera \(0\), es decir, cuando 
+                \(x+1 = 0\), usando algebra tendremos que cuando \(x=-1\) sucede que \(x+1 = 0\), hecho esto podemos decir 
+                que el \(Dom(f) = \Re \setminus \{-1\}\) o \(Dom(f) = (-\infty,-1) \cup (-1,\infty)\). <br>
+                Para el rango debido a que la unica forma de que una fracción sea igual a 0
+              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x+1}\) entonces el rango es 
+              \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
+              \(Ran(f) = (-\infty,0) \cup (0,\infty)\).
+              </p>
+              <div class="image-container">
+   <img src="img_funciones/CALEB_graficas/(x+1).png" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
+</div>
+          </div>
+
         </div>
         </div>
 
@@ -301,8 +364,25 @@
 
           <p>Para entender las funciones trigonometrícas nos apoyaremos de un triangulo rectangulo, mas precisamente, en uno que esta 
             formado a travez de un circulo, con su primer vertice en el origen \(O\), el segundo se situara en el perimetro del circulo, y el tercero
-            estara en eje \(x\) de tal forma que tenga un angulo de \(90°\).
-          </p>
+            estara en eje \(x\) de tal forma que tenga un angulo de \(90°\), el angulo \(\theta\) se formara por los lados del triangulo que llamaremos \(Cateto\hspace{0.2cm}adyacente\hspace{0.2cm}e\hspace{0.2cm}Hipotenusa\), el lado restante se llamara \(Cateto\hspace{0.2cm}opuesto\)
+            de esta forma decimos que:</p>
+
+            <div class="two-column-list">
+        <div class="column">
+            <ul>
+                <li>\(\large{sen \theta = \frac{Cateto\hspace{0.2cm}opuesto}{Hiputenusa}}\)</li>
+                <li>\(\large{cos \theta = \frac{Cateto\hspace{0.2cm}adyacente}{Hiputenusa}}\)</li>
+                <li>\(\large{tan \theta = \frac{Cateto\hspace{0.2cm}opuesto}{Cateto\hspace{0.2cm}adyacente}}\)</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul start="4">
+                <li>\(\large{cot \theta = \frac{Cateto\hspace{0.2cm}adyacente}{Cateto\hspace{0.2cm}opuesto}}\)</li>
+                <li>\(\large{sec \theta = \frac{Hiputenusa}{Cateto\hspace{0.2cm}opuesto}}\)</li>
+                <li>\(\large{csc \theta = \frac{Hiputenusa}{Cateto\hspace{0.2cm}adyacente}}\)</li>
+            </ul>
+        </div>
+        </div>
 
           <div class="image-container">
    <img src="img_funciones/CALEB_graficas/funciones_trig_individual.gif" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
@@ -336,75 +416,10 @@
         <div class="math-topic" id="tema3">
           <h2>3. Propiedades</h2>
           
-          <!-- Subtema 3.1 -->
-          <h3 id="tema3-1">3.1 Dominio y Rango de una función </h3>
-          <p>Ya sabiendo lo que se aprendio en la seccion 1.3 vamos a analizar algunos casos de dominios y rangos de algunas funciones especificas</p>
-
-          <div class="math-example">
-          <h3 class="example-title">Raices Cuadradas</h3>
-          <p>Cuando nuestra funcion sea una raíz cuadrada del tipo \(f(x) = \sqrt{x}\) debemos tener en cuenta que por como funciona una raíz cuadrada 
-            se puede definir como un numero que al multiplicarse por si mismo, resulta el numero original. O en otras palabras, si \(a\) es la raiz cuadrada de 
-            \(b\) (\(\sqrt{b} = a\)) es por que \(a \cdot a = b\).
-            <br>
-            <br>
-             Como podemos ver, \(b\) siempre tendra un signo positivo, ya que por ley de signos si su raíz es negativa \(-a\) entonces \((-a) \cdot (-a)\) tendra un resultado positivo.
-             Se puede decir que \((-a) \cdot (-a) = a \cdot a = b\).  
-             <br><br>
-             Dicho esto podemos analizar que en la funcion \(f(x) = \sqrt{x}\), va a ser imposible que x sea negativa, lo que quiere decir que 
-             mi funcion solo puede recibir valores positivos, o dicho de otra manera, el dominio de \(f(x)\) son todos los reales positivos
-             \(Dom(f) = \Re^{+}\) o escrito de otra forma  \(Dom(f) = [0,\infty) \).
-             <br><br>
-             Por otro lado, una vez conocido el dominio, podremos saber su rango, ya que si nuestro dominio de \(f(x) = \sqrt{x}\) solo es positivo
-             entonces su rango tambien sera positivo, ya que para todo valor positivo del dominio le correspondera un valor
-             tambien positivo en el rango \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
-          </p>
-           <h4>Ejemplo</h4>
-           <p>\(f(x) = \sqrt{x-1}\)<br>
-            Ya que la raiz no puede operar un valor negativo podemos ver que \(x-1\) es negativo en todos los valores
-            menores que \(x=1\), entonces el dominio \(Dom(f)=[1,\infty)\). <br>Para su rango ya que cuando \(x=1\)
-            , \(f(1) = \sqrt{1-1} = \sqrt{0} = 0\), a partir de \(x=1\) los valores de \(f(x)\) seran negativos, lo que quiere decir que su rango
-              sera \(Ran(f) = \Re^{+}\) o escrito de otra forma  \(Ran(f) = [0,\infty) \).
-              </p>
-              <div class="image-container">
-   <img src="img_funciones/CALEB_graficas/Grafica_raiz_x-1.png" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
-</div>
-          </div>
-            <div class="math-example">
-              <h3 class="example-title">Fracciones</h3>
-              <p>Cuando se nos presenta una funcion del tipo \(f(x) = \frac{1}{x}\), hay que dejar en claro que
-                la división \(\frac{1}{0}\) es una indeterminación en las matematicas, ya que la división se define 
-                como \(\frac{a}{b} = c\) tal que \(c \cdot b = a\), esto quiere decir que para \(b=0\) entonces \(c \cdot 0 = a\)
-                lo cual es estrictamente \(0\), pero sabemos que \(a \neq 0\) lo que quiere decir que no cumple con el criterio de la división.
-
-              <br><br>
-              Esto queire decir que el dominio de la funcion \(f(x) = \frac{1}{x}\) seran todos los valores de \(x\) excepto cuando
-              \(x=0\), entonces el dominio de \(f(x)\) son todos los reales menos el \(0\), \(Dom(f) = \Re \setminus \{0\} \), o escrito de otra forma
-              \(Dom(f) = (-\infty,0) \cup (0,\infty)\)
-              <br><br>
-              Para el rango de \(f(x)\) resultaria mas facil usando la funcion inversa, pero esta se enseñara hasta la seccion 3.7 del presente capitulo
-              . Por ahora diremos que \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
-              \(Ran(f) = (-\infty,0) \cup (0,\infty)\), el rango excluye al \(0\) debido a que la unica forma de que una fracción sea igual a 0
-              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x}\).
-              </p>
-              <h4>Ejemplo</h4>
-              <p>
-                \(f(x) = \frac{1}{x+1}\)<br>
-                para saber el dominio de esta función debemos ver cuando el denominador sera \(0\), es decir, cuando 
-                \(x+1 = 0\), usando algebra tendremos que cuando \(x=-1\) sucede que \(x+1 = 0\), hecho esto podemos decir 
-                que el \(Dom(f) = \Re \setminus \{-1\}\) o \(Dom(f) = (-\infty,-1) \cup (-1,\infty)\). <br>
-                Para el rango debido a que la unica forma de que una fracción sea igual a 0
-              es solo si el numerador es \(0\) lo cual no se cumple en \(f(x) = \frac{1}{x+1}\) entonces el rango es 
-              \(Ran(f) = \Re \setminus \{0\} \), o escrito de otra forma
-              \(Ran(f) = (-\infty,0) \cup (0,\infty)\).
-              </p>
-              <div class="image-container">
-   <img src="img_funciones/CALEB_graficas/(x+1).png" style="display: block; max-width: 60%; height: auto; margin: 0 auto;">
-</div>
-          </div>
-
+        
           
-          <!-- Subtema 3.2 -->
-          <h3 id="tema3-2">3.2 Raices</h3>
+          <!-- Subtema 3.1 -->
+          <h3 id="tema3-1">3.1 Raices</h3>
           <div class="math-example">
           <p>Las raíces de una función \(y = f(x)\) son los valores \(x\) en los cuales \(f(x)\) se hace \(0\). En algunos casos, la función \(f\) tiene una forma tal que el problema se puede resolver algebraicamente. Es el caso de los polinomios de grado 2, e incluso los polinomios de grado 3 y 4. Sin embargo, en la mayoría de los casos, el problema sólo tiene solución numérica.
           Esto significa que hay que usar el computador para encontrar los valores numéricos de las raíces. No es posible, encontrar una fórmula algebraica que entregue las soluciones, en esta seccion solo se presentaran casos en donde la raiz tiene una solucion algebraica.</p>
@@ -428,8 +443,8 @@
 </div>
           
           </div>
-          <!-- Subtema 3.3 -->
-          <h3 id="tema3-3">3.3 Inyectividad, Suprayectividad y Biyectividad</h3>
+          <!-- Subtema 3.2 -->
+          <h3 id="tema3-2">3.2 Inyectividad, Suprayectividad y Biyectividad</h3>
          
   <div class="math-example">
   <h3 class="example-title">Inyectividad</h3>
@@ -503,8 +518,8 @@ la sección de contención e inversa de funciones. Más adelante lo comprobaremo
   
 
           
-          <!-- Subtema 3.4 -->
-          <h3 id="tema3-4">3.4 Par o Impar</h3>
+          <!-- Subtema 3.3 -->
+          <h3 id="tema3-3">3.3 Par o Impar</h3>
  <div class="math-example">
   <h3 class="example-title">Función par</h3>
    <div class="math-info-box">
@@ -544,8 +559,8 @@ f(-x) &= (-x)^3 && \text{(Aplicando la definición)} \\
 verificamos que si es impar.
 </p>
     </div>
-          <!-- Subtema 3.5 -->
-          <h3 id="tema3-5">3.5 Monotonía</h3>
+          <!-- Subtema 3.4 -->
+          <h3 id="tema3-4">3.4 Monotonía</h3>
         <div class="math-example">
   <h3 class="example-title">Máximos y mínimos</h3>
    <div class="math-info-box">
@@ -554,8 +569,8 @@ verificamos que si es impar.
 <p>Seguro habras notado en algunas gráficas intervalos donde la función comienza a crecer, alcanza un punto máximo y decrece o por el contrario intervalos donde la función comienza a decrecer, alcanza un punto mínimo y crece nuevamente. A estos puntos \(c\) los llamaremos puntos criticos.  </p>
 </div>
         
-          <!-- Subtema 3.6 -->
-          <h3 id="tema3-6">3.6 Composición de funciones</h3>
+          <!-- Subtema 3.5 -->
+          <h3 id="tema3-5">3.5 Composición de funciones</h3>
        <div class="math-example">
    <div class="math-info-box">
     <p><strong>Definición:</strong> La composición de una función es una operación que combina dos o más funciones para crear una nueva función.
@@ -600,8 +615,8 @@ Esto significa que primero se aplica la función \(g\) a la entrada \(x\), y lue
   </p>
   </div>
         
-          <!-- Subtema 3.7 -->
-      <h3 id="tema3-7">3.7 Inversa de funciones</h3>
+          <!-- Subtema 3.6 -->
+      <h3 id="tema3-6">3.6 Inversa de funciones</h3>
          <div class="math-example">
            <div class="math-info-box">
                <p><strong>Definición:</strong> Una función \(f\) es invertible si y solo si existe una función \(g\) tal que \(f(g(x)) = x\)
