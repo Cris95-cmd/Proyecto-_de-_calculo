@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Funciones | Cálculo Continuo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cursos.css">
+  <link rel="stylesheet" href="curso-prec.css">
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    /* Estilos adicionales para ejercicios */
+    .exercise-container {
+      background: rgba(40, 40, 40, 0.8);
+      border-radius: 12px;
+      padding: 25px;
+      margin: 30px 0;
+      border-left: 4px solid var(--math-purple);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    
+    .exercise-title {
+      color: var(--math-gold);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255,215,0,0.3);
+      padding-bottom: 8px;
+    }
+    
+    .exercise-content {
+      margin-bottom: 20px;
+    }
+    
+    .exercise-input {
+      width: 100%;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 6px;
+      color: white;
+      margin: 10px 0;
+    }
+    
+    .exercise-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    .exercise-table th, .exercise-table td {
+      border: 1px solid rgba(255,215,0,0.2);
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .exercise-table th {
+      background: rgba(157,80,187,0.2);
+    }
+    
+    .exercise-options {
+      margin: 15px 0;
+    }
+    
+    .exercise-option {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .exercise-option:hover {
+      background: rgba(157,80,187,0.2);
+    }
+    
+    .btn-check {
+      background: rgba(74,222,128,0.2);
+      color: #4ade80;
+      border: 1px solid #4ade80;
+      margin-top: 10px;
+    }
+    
+    .btn-check:hover {
+      background: rgba(74,222,128,0.4);
+    }
+    
+    .feedback {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      display: none;
+    }
+    
+    .feedback.correct {
+      background: rgba(74,222,128,0.2);
+      border: 1px solid #4ade80;
+      display: block;
+    }
+    
+    .feedback.incorrect {
+      background: rgba(239,68,68,0.2);
+      border: 1px solid #ef4444;
+      display: block;
+    }
+    
+    .solution-toggle {
+      color: var(--math-blue);
+      cursor: pointer;
+      text-decoration: underline;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    
+    .solution-content {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(30,30,30,0.9);
+      border-radius: 8px;
+      border-left: 3px solid var(--math-blue);
+    }
+  </style>
+</head>
+<body>
+  <!-- Partículas de fondo -->
+  <div id="particles-js"></div>
+  
+  <!-- Barra de navegación -->
+  <header class="math-navbar">
+    <div class="math-logo">
+      <img src="../Imagenes/logo.png" alt="Logo" class="logo-img">
+      <span>Cálculo Continuo</span>
+    </div>
+    
+    <button class="menu-toggle" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="math-nav-buttons">
+      <a href="index.php" class="math-nav-btn">Inicio</a>
+      <a href="funciones.html" class="math-nav-btn">Teoría</a>
+      <a href="ejercicios-funciones.html" class="math-nav-btn active">Ejercicios</a>
+      <a href="contacto.html" class="math-nav-btn">Contacto</a>
+    </nav>
+  </header>
+  
+  <!-- Contenido principal -->
+  <div class="math-course-container">
+    <div class="math-sidebar">
+      <div class="sidebar-content">
+        <h2>Ejercicios por tema</h2>
+        <a href="#evaluacion">Evaluación de funciones</a>
+        <a href="#dominio">Dominio y rango</a>
+        <a href="#tipos">Tipos de funciones</a>
+        <a href="#propiedades">Propiedades</a>
+        <a href="#transformaciones">Transformaciones</a>
+      </div>
+    </div>
+    
+    <div class="math-content">
+      <div class="math-header">
+        <h1>Ejercicios de Funciones</h1>
+        <p>Practica lo aprendido con estos ejercicios interactivos</p>
+      </div>
+      
+      <!-- Ejercicio 1: Evaluación de funciones -->
+      <div class="exercise-container" id="evaluacion">
+        <h2 class="exercise-title">1. Evaluación de funciones</h2>
+        <div class="exercise-content">
+          <p>Dada la función \( f(x) = 2x^2 - 3x + 1 \), evalúa:</p>
+          <p>\[ f(2) = \]</p>
+          <input type="text" class="exercise-input" id="eval-input" placeholder="Ingresa tu respuesta">
+          <button class="btn btn-check" onclick="checkEvaluation()">Verificar</button>
+          <div class="feedback" id="eval-feedback"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution('eval-solution')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution">
+            <p>Para evaluar \( f(2) \):</p>
+            <p>\[ f(2) = 2(2)^2 - 3(2) + 1 \]</p>
+            <p>\[ = 2(4) - 6 + 1 \]</p>
+            <p>\[ = 8 - 6 + 1 = 3 \]</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejercicio 2: Dominio y rango -->
+      <div class="exercise-container" id="dominio">
+        <h2 class="exercise-title">2. Dominio y rango</h2>
+        <div class="exercise-content">
+          <p>Determina el dominio de la siguiente función:</p>
+          <p>\[ f(x) = \sqrt{4 - x} \]</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="A"> \( (-\infty, 4] \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="B"> \( [4, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="C"> \( (-\infty, 4) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="D"> \( (4, \infty) \)
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkDomain()">Verificar</button>
+          <div class="feedback" id="domain-feedback"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution('domain-solution')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution">
+            <p>Para que la raíz cuadrada esté definida:</p>
+            <p>\[ 4 - x \geq 0 \]</p>
+            <p>\[ -x \geq -4 \]</p>
+            <p>\[ x \leq 4 \]</p>
+            <p>Por lo tanto, el dominio es \( (-\infty, 4] \)</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejercicio 3: Tipos de funciones -->
+      <div class="exercise-container" id="tipos">
+        <h2 class="exercise-title">3. Tipos de funciones</h2>
+        <div class="exercise-content">
+          <p>Completa la tabla de valores para la función \( f(x) = 2^x \):</p>
+          
+          <table class="exercise-table">
+            <tr>
+              <th>x</th>
+              <th>f(x)</th>
+            </tr>
+            <tr>
+              <td>-1</td>
+              <td><input type="text" class="exercise-input small-input" id="val1"></td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td><input type="text" class="exercise-input small-input" id="val2"></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td><input type="text" class="exercise-input small-input" id="val3"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><input type="text" class="exercise-input small-input" id="val4"></td>
+            </tr>
+          </table>
+          
+          <button class="btn btn-check" onclick="checkTable()">Verificar</button>
+          <div class="feedback" id="table-feedback"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution('table-solution')">Mostrar solución</div>
+          <div class="solution-content" id="table-solution">
+            <p>Valores correctos:</p>
+            <ul>
+              <li>\( f(-1) = 2^{-1} = 0.5 \)</li>
+              <li>\( f(0) = 2^0 = 1 \)</li>
+              <li>\( f(1) = 2^1 = 2 \)</li>
+              <li>\( f(2) = 2^2 = 4 \)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejercicio 4: Propiedades -->
+      <div class="exercise-container" id="propiedades">
+        <h2 class="exercise-title">4. Propiedades de funciones</h2>
+        <div class="exercise-content">
+          <p>Determina si la función \( f(x) = x^3 - x \) es par, impar o ninguna:</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="paridad" value="A"> Par
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="paridad" value="B"> Impar
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="paridad" value="C"> Ninguna
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkParity()">Verificar</button>
+          <div class="feedback" id="parity-feedback"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution('parity-solution')">Mostrar solución</div>
+          <div class="solution-content" id="parity-solution">
+            <p>Para determinar si es par o impar, evaluamos \( f(-x) \):</p>
+            <p>\[ f(-x) = (-x)^3 - (-x) = -x^3 + x = -(x^3 - x) = -f(x) \]</p>
+            <p>Como \( f(-x) = -f(x) \), la función es impar.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejercicio 5: Transformaciones -->
+      <div class="exercise-container" id="transformaciones">
+        <h2 class="exercise-title">5. Transformaciones de funciones</h2>
+        <div class="exercise-content">
+          <p>Dada \( f(x) = x^2 \), escribe la función que representa:</p>
+          <p>"Desplazar 2 unidades a la derecha, reflejar sobre el eje x y desplazar 3 unidades hacia arriba":</p>
+          
+          <input type="text" class="exercise-input" id="transform-input" placeholder="Ingresa la función transformada">
+          <button class="btn btn-check" onclick="checkTransform()">Verificar</button>
+          <div class="feedback" id="transform-feedback"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution('transform-solution')">Mostrar solución</div>
+          <div class="solution-content" id="transform-solution">
+            <p>Transformaciones paso a paso:</p>
+            <ol>
+              <li>Desplazar 2 unidades a la derecha: \( f(x-2) = (x-2)^2 \)</li>
+              <li>Reflejar sobre el eje x: \( -f(x-2) = -(x-2)^2 \)</li>
+              <li>Desplazar 3 unidades hacia arriba: \( -f(x-2) + 3 = -(x-2)^2 + 3 \)</li>
+            </ol>
+            <p>Función final: \( g(x) = -(x-2)^2 + 3 \)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Configuración de partículas
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+        "color": {"value": "#9d50bb"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.5, "random": true},
+        "size": {"value": 3, "random": true},
+        "line_linked": {"enable": true, "distance": 150, "color": "#9d50bb", "opacity": 0.4, "width": 1},
+        "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out"}
+      }
+    });
+    
+    // Función para mostrar/ocultar soluciones
+    function toggleSolution(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+    
+    // Función para verificar evaluación de función
+    function checkEvaluation() {
+      const input = document.getElementById('eval-input').value.trim();
+      const feedback = document.getElementById('eval-feedback');
+      
+      if (input === "3") {
+        feedback.textContent = "¡Correcto! f(2) = 3";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es 3";
+        feedback.className = "feedback incorrect";
+      }
+    }
+    
+    // Función para verificar dominio
+    function checkDomain() {
+      const selected = document.querySelector('input[name="dominio"]:checked');
+      const feedback = document.getElementById('domain-feedback');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "A") {
+        feedback.textContent = "¡Correcto! El dominio es (-∞, 4] porque la expresión dentro de la raíz debe ser ≥ 0";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es (-∞, 4] porque 4-x debe ser ≥ 0";
+        feedback.className = "feedback incorrect";
+      }
+    }
+    
+    // Función para verificar tabla de valores
+    function checkTable() {
+      const val1 = document.getElementById('val1').value.trim();
+      const val2 = document.getElementById('val2').value.trim();
+      const val3 = document.getElementById('val3').value.trim();
+      const val4 = document.getElementById('val4').value.trim();
+      const feedback = document.getElementById('table-feedback');
+      
+      const correct = ["0.5", "1", "2", "4"];
+      const answers = [val1, val2, val3, val4];
+      
+      let allCorrect = true;
+      for (let i = 0; i < 4; i++) {
+        if (answers[i] !== correct[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Perfecto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+    
+    // Función para verificar paridad
+    function checkParity() {
+      const selected = document.querySelector('input[name="paridad"]:checked');
+      const feedback = document.getElementById('parity-feedback');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "B") {
+        feedback.textContent = "¡Correcto! La función es impar porque f(-x) = -f(x)";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La función es impar porque f(-x) = -f(x)";
+        feedback.className = "feedback incorrect";
+      }
+    }
+    
+    // Función para verificar transformación
+    function checkTransform() {
+      const input = document.getElementById('transform-input').value.trim().replace(/\s+/g, '');
+      const feedback = document.getElementById('transform-feedback');
+      
+      // Acepta diferentes formas equivalentes de la respuesta
+      const correctAnswers = [
+        "-(x-2)^2+3",
+        "-1*(x-2)^2+3",
+        "3-(x-2)^2",
+        "-pow(x-2,2)+3",
+        "3-pow(x-2,2)"
+      ];
+      
+      if (correctAnswers.includes(input)) {
+        feedback.textContent = "¡Correcto! La función transformada es -(x-2)² + 3";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es -(x-2)² + 3";
+        feedback.className = "feedback incorrect";
+      }
+    }
+  </script>
+  <script src="precalculo.js"></script>
+</body>
+</html>
