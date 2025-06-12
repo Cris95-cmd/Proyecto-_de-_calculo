@@ -32,13 +32,15 @@
     }
     
     .exercise-input {
-      width: 100%;
-      padding: 10px;
+      padding: 8px;
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,215,0,0.3);
       border-radius: 6px;
       color: white;
-      margin: 10px 0;
+      margin: 0 5px;
+      width: 60px;
+      text-align: center;
+      display: inline-block;
     }
     
     .exercise-table {
@@ -55,6 +57,17 @@
     
     .exercise-table th {
       background: rgba(157,80,187,0.2);
+    }
+    
+    .exercise-table input {
+      width: 80px;
+      padding: 5px;
+      box-sizing: border-box;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 4px;
+      color: white;
+      text-align: center;
     }
     
     .exercise-options {
@@ -121,6 +134,12 @@
       border-radius: 8px;
       border-left: 3px solid var(--math-blue);
     }
+    
+    .fill-blank-exercise {
+      font-size: 1.2rem;
+      line-height: 2;
+      font-family: 'Courier New', monospace;
+    }
   </style>
 </head>
 <body>
@@ -166,26 +185,201 @@
         <h1>Ejercicios de Funciones</h1>
         <p>Practica lo aprendido con estos ejercicios interactivos</p>
       </div>
-      
-      <!-- Ejercicio 1: Evaluación de funciones -->
+       <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+      <!-- Ejercicio 1: Evaluación de funciones - Versión mejorada -->
       <div class="exercise-container" id="evaluacion">
         <h2 class="exercise-title">1. Evaluación de funciones</h2>
         <div class="exercise-content">
-          <p>Dada la función \( f(x) = 2x^2 - 3x + 1 \), evalúa:</p>
-          <p>\[ f(2) = \]</p>
-          <input type="text" class="exercise-input" id="eval-input" placeholder="Ingresa tu respuesta">
-          <button class="btn btn-check" onclick="checkEvaluation()">Verificar</button>
-          <div class="feedback" id="eval-feedback"></div>
+          <p>Completa los espacios en blanco para evaluar la función:</p>
           
-          <div class="solution-toggle" onclick="toggleSolution('eval-solution')">Mostrar solución</div>
-          <div class="solution-content" id="eval-solution">
-            <p>Para evaluar \( f(2) \):</p>
-            <p>\[ f(2) = 2(2)^2 - 3(2) + 1 \]</p>
-            <p>\[ = 2(4) - 6 + 1 \]</p>
-            <p>\[ = 8 - 6 + 1 = 3 \]</p>
+          <div class="fill-blank-exercise">
+            <p>Dada \( f(x) = x^2 + 2x - 1 \), evaluar \( f(3) \):</p>
+            <p>
+              \( f(3) = \) <input type="text" class="exercise-input" id="eval-input1.1"> 
+              \( ^2 + 2 \cdot \) <input type="text" class="exercise-input" id="eval-input1.2"> 
+              \( - 1 = \) <input type="text" class="exercise-input" id="eval-input1.3"> 
+              \( + \) <input type="text" class="exercise-input" id="eval-input1.4"> 
+              \( - 1 = \) <input type="text" class="exercise-input" id="eval-input1.5">
+            </p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkEvaluation1()">Verificar</button>
+          <div class="feedback" id="eval-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution1('eval-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution1">
+            <p>Solución paso a paso:</p>
+            <p>\[ f(3) = (3)^2 + 2 \cdot (3) - 1 \]</p>
+            <p>\[ = 9 + 6 - 1 \]</p>
+            <p>\[ = 14 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 3</li>
+              <li>Segundo espacio: 3</li>
+              <li>Tercer espacio: 9</li>
+              <li>Cuarto espacio: 6</li>
+              <li>Quinto espacio: 14</li>
+            </ol>
           </div>
         </div>
       </div>
+ 
+      <!-- Ejercicio 2: Evaluación de funciones - Versión mejorada -->
+      <div class="exercise-container" id="evaluacion">
+        <h2 class="exercise-title">1. Evaluación de funciones</h2>
+        <div class="exercise-content">
+          <p>Completa los espacios en blanco para evaluar la función:</p>
+          
+          <div class="fill-blank-exercise">
+            <p>Dada \( f(x) = x^3 - 7 \), evaluar \( f(2) \):</p>
+            <p>
+              \( f(2) = \)<input type="text" class="exercise-input" id="eval-input2.1">
+              \( ^3 - 7 = \)<input type="text" class="exercise-input" id="eval-input2.2">  
+              \( - 7 \) = <input type="text" class="exercise-input" id="eval-input2.3"> 
+              
+            </p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkEvaluation2()">Verificar</button>
+          <div class="feedback" id="eval-feedback2"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution2('eval-solution2')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution2">
+            <p>Solución paso a paso:</p>
+            <p>\[ f(2) = (2)^3 - 7 \]</p>
+            <p>\[ = 8 - 7 \]</p>
+            <p>\[ = 1 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 2</li>
+              <li>Segundo espacio: 8</li>
+              <li>Tercer espacio: 1</li>
+            </ol>
+          </div>
+        </div>
+    </div>
+      
+
+      <!-- Ejercicio 3: Evaluación de funciones - Versión mejorada -->
+      <div class="exercise-container" id="evaluacion">
+        <h2 class="exercise-title">1. Evaluación de funciones</h2>
+        <div class="exercise-content">
+          <p>Completa los espacios en blanco para evaluar la función:</p>
+          
+          <div class="fill-blank-exercise">
+            <p>Dada \( f(x) = 2x + 3x^2 \), evaluar \( f(5) \):</p>
+            <p>
+              \( f(5) = 2 \cdot \)<input type="text" class="exercise-input" id="eval-input3.1">
+              \(+ 3 \cdot \)<input type="text" class="exercise-input" id="eval-input3.2">  
+              \(^2\) = <input type="text" class="exercise-input" id="eval-input3.3"> 
+              \( + 3 \cdot \) <input type="text" class="exercise-input" id="eval-input3.4">
+              \( = \) <input type="text" class="exercise-input" id="eval-input3.5">
+              \( + \) <input type="text" class="exercise-input" id="eval-input3.6">
+              \( = \) <input type="text" class="exercise-input" id="eval-input3.7">
+            </p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkEvaluation3()">Verificar</button>
+          <div class="feedback" id="eval-feedback3"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution3('eval-solution3')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution3">
+            <p>Solución paso a paso:</p>
+            <p>\[ f(5) = 2(5) + 3(5)^2 \]</p>
+            <p>\[ = 10 + 3(25) \]</p>
+            <p>\[ = 10 + 75 \]</p>
+            <p>\[ = 85 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 5</li>
+              <li>Segundo espacio: 5</li>
+              <li>Tercer espacio: 10</li>
+              <li>Cuarto espacio: 25</li>
+              <li>Quinto espacio: 10</li>
+              <li>Sexto espacio: 75</li>
+              <li>Septimo espacio: 85</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 4: Evaluación de funciones - Versión mejorada -->
+      <div class="exercise-container" id="evaluacion">
+        <h2 class="exercise-title">1. Evaluación de funciones</h2>
+        <div class="exercise-content">
+          <p>Completa los espacios en blanco para evaluar la función:</p>
+          
+          <div class="fill-blank-exercise">
+            <p>Dada \( f(x) = x^4 - 2x^2 - x - 2 \), evaluar \( f(2) \):</p>
+            <p>
+              \( f(2) = \)<input type="text" class="exercise-input" id="eval-input4.1"> \(^4 - 2 \cdot \) <input type="text" class="exercise-input" id="eval-input4.2">  \(^2 - \) <input type="text" class="exercise-input" id="eval-input4.3">  \( - 2 =\)
+              <input type="text" class="exercise-input" id="eval-input4.4"> \( - 2 \cdot \) <input type="text" class="exercise-input" id="eval-input4.5"> \( - \) <input type="text" class="exercise-input" id="eval-input4.6">  \( - 2 =\)
+              <input type="text" class="exercise-input" id="eval-input4.7"> \( - \) <input type="text" class="exercise-input" id="eval-input4.8"> \( - \) <input type="text" class="exercise-input" id="eval-input4.9"> \( - 2 =\)
+              <input type="text" class="exercise-input" id="eval-input4.10">
+            </p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkEvaluation4()">Verificar</button>
+          <div class="feedback" id="eval-feedback4"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution4('eval-solution4')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution4">
+            <p>Solución paso a paso:</p>
+            <p>\[ f(2) = (2)^4 - 2(2)^2 - (2) - 2 \]</p>
+            <p>\[ = 16 - 2(4) - 2 - 2 \]</p>
+            <p>\[ = 16 - 8 - 2 - 2 \]</p>
+            <p>\[ = 4 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 2</li>
+              <li>Segundo espacio: 2</li>
+              <li>Tercer espacio: 2</li>
+              <li>Cuarto espacio: 16</li>
+              <li>Quinto espacio: 4</li>
+              <li>Sexto espacio: 2</li>
+              <li>Septimo espacio: 16</li>
+              <li>Octavo espacio: 8</li>
+              <li>Noveno espacio: 2</li>
+              <li>Decimo espacio: 4</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ejercicio 5: Evaluación de funciones - Versión mejorada -->
+      <div class="exercise-container" id="evaluacion">
+        <h2 class="exercise-title">1. Evaluación de funciones</h2>
+        <div class="exercise-content">
+          <p>Completa los espacios en blanco para evaluar la función:</p>
+          
+          <div class="fill-blank-exercise">
+            <p>Dada \( f(x) = 3x - 100  \), evaluar \( f(20) \):</p>
+            <p>
+              \( f(20) = 3 \cdot \)<input type="text" class="exercise-input" id="eval-input5.1"> \( - 100 =\)
+              <input type="text" class="exercise-input" id="eval-input5.2"> \( - 100 = \) <input type="text" class="exercise-input" id="eval-input5.3"> 
+            </p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkEvaluation5()">Verificar</button>
+          <div class="feedback" id="eval-feedback5"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution5('eval-solution5')">Mostrar solución</div>
+          <div class="solution-content" id="eval-solution5">
+            <p>Solución paso a paso:</p>
+            <p>\[ f(20) = 3(20 - 100) \]</p>
+            <p>\[ = 60 - 100 \]</p>
+            <p>\[ = -40 \]</p>
+
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 20</li>
+              <li>Segundo espacio: 60</li>
+              <li>Tercer espacio: -40</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+       <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
       
       <!-- Ejercicio 2: Dominio y rango -->
       <div class="exercise-container" id="dominio">
@@ -202,18 +396,18 @@
               <input type="radio" name="dominio" value="B"> \( [4, \infty) \)
             </label>
             <label class="exercise-option">
-              <input type="radio" name="dominio" value="C"> \( (-\infty, 4) \)
+              <input type="radio" name="dominio" value="C"> \( (-\infty, \infty) \)
             </label>
             <label class="exercise-option">
               <input type="radio" name="dominio" value="D"> \( (4, \infty) \)
             </label>
           </div>
           
-          <button class="btn btn-check" onclick="checkDomain()">Verificar</button>
-          <div class="feedback" id="domain-feedback"></div>
+          <button class="btn btn-check" onclick="checkDomain1()">Verificar</button>
+          <div class="feedback" id="domain-feedback1"></div>
           
-          <div class="solution-toggle" onclick="toggleSolution('domain-solution')">Mostrar solución</div>
-          <div class="solution-content" id="domain-solution">
+          <div class="solution-toggle" onclick="toggleSolution6('domain-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution1">
             <p>Para que la raíz cuadrada esté definida:</p>
             <p>\[ 4 - x \geq 0 \]</p>
             <p>\[ -x \geq -4 \]</p>
@@ -222,8 +416,45 @@
           </div>
         </div>
       </div>
+
+
+      <div class="exercise-container" id="dominio">
+        <h2 class="exercise-title">2. Dominio y rango</h2>
+        <div class="exercise-content">
+          <p>Determina el dominio de la siguiente función:</p>
+          <p>\[ f(x) = \frac{x^2}{x - 4} \]</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="A"> \( (-\infty, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="B"> \( (-\infty, 4) \cup (4, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="C"> \( (-\infty, 4] \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="D"> \( (-\infty, 0) \cup (0, \infty) \)
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkDomain2()">Verificar</button>
+          <div class="feedback" id="domain-feedback2"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution7('domain-solution2')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution2">
+            <p>Para que la fraccion esté definida:</p>
+            <p>\[ x - 4 \neq 0 \]</p>
+            <p>\[ x \neq 4 \]</p>
+            <p>Por lo tanto, el dominio es \( (-\infty, 4) \cup (4, \infty) \)</p>
+          </div>
+        </div>
+      </div>
       
-      <!-- Ejercicio 3: Tipos de funciones -->
+
+      <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Ejercicio 3: Tipos de funciones - Tabla mejorada -->
       <div class="exercise-container" id="tipos">
         <h2 class="exercise-title">3. Tipos de funciones</h2>
         <div class="exercise-content">
@@ -236,19 +467,19 @@
             </tr>
             <tr>
               <td>-1</td>
-              <td><input type="text" class="exercise-input small-input" id="val1"></td>
+              <td><input type="text" id="val1"></td>
             </tr>
             <tr>
               <td>0</td>
-              <td><input type="text" class="exercise-input small-input" id="val2"></td>
+              <td><input type="text" id="val2"></td>
             </tr>
             <tr>
               <td>1</td>
-              <td><input type="text" class="exercise-input small-input" id="val3"></td>
+              <td><input type="text" id="val3"></td>
             </tr>
             <tr>
               <td>2</td>
-              <td><input type="text" class="exercise-input small-input" id="val4"></td>
+              <td><input type="text" id="val4"></td>
             </tr>
           </table>
           
@@ -305,7 +536,7 @@
           <p>Dada \( f(x) = x^2 \), escribe la función que representa:</p>
           <p>"Desplazar 2 unidades a la derecha, reflejar sobre el eje x y desplazar 3 unidades hacia arriba":</p>
           
-          <input type="text" class="exercise-input" id="transform-input" placeholder="Ingresa la función transformada">
+          <input type="text" class="exercise-input" id="transform-input" placeholder="Ingresa la función transformada" style="width: 100%;">
           <button class="btn btn-check" onclick="checkTransform()">Verificar</button>
           <div class="feedback" id="transform-feedback"></div>
           
@@ -341,29 +572,192 @@
     });
     
     // Función para mostrar/ocultar soluciones
-    function toggleSolution(id) {
+    function toggleSolution1(id) {
       const solution = document.getElementById(id);
       solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
     }
     
-    // Función para verificar evaluación de función
-    function checkEvaluation() {
-      const input = document.getElementById('eval-input').value.trim();
-      const feedback = document.getElementById('eval-feedback');
+    // Función para verificar evaluación de función (versión mejorada)
+    function checkEvaluation1() {
+      const inputs = [
+        document.getElementById('eval-input1.1').value.trim(),
+        document.getElementById('eval-input1.2').value.trim(),
+        document.getElementById('eval-input1.3').value.trim(),
+        document.getElementById('eval-input1.4').value.trim(),
+        document.getElementById('eval-input1.5').value.trim()
+      ];
       
-      if (input === "3") {
-        feedback.textContent = "¡Correcto! f(2) = 3";
+      const correctAnswers = ["3", "3", "9", "6", "14"];
+      const feedback = document.getElementById('eval-feedback1');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
         feedback.className = "feedback correct";
       } else {
-        feedback.textContent = "Incorrecto. La respuesta correcta es 3";
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+    function toggleSolution2(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkEvaluation2() {
+      const inputs = [
+        document.getElementById('eval-input2.1').value.trim(),
+        document.getElementById('eval-input2.2').value.trim(),
+        document.getElementById('eval-input2.3').value.trim()
+      ];
+      
+      const correctAnswers = ["2", "8", "1" ];
+      const feedback = document.getElementById('eval-feedback2');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+     function toggleSolution3(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkEvaluation3() {
+      const inputs = [
+        document.getElementById('eval-input3.1').value.trim(),
+        document.getElementById('eval-input3.2').value.trim(),
+        document.getElementById('eval-input3.3').value.trim(),
+        document.getElementById('eval-input3.4').value.trim(),
+        document.getElementById('eval-input3.5').value.trim(),
+        document.getElementById('eval-input3.6').value.trim(),
+        document.getElementById('eval-input3.7').value.trim()
+      ];
+      
+      const correctAnswers = ["5", "5", "10", "25", "10", "75", "85" ];
+      const feedback = document.getElementById('eval-feedback3');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
         feedback.className = "feedback incorrect";
       }
     }
     
+
+     function toggleSolution4(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkEvaluation4() {
+      const inputs = [
+        document.getElementById('eval-input4.1').value.trim(),
+        document.getElementById('eval-input4.2').value.trim(),
+        document.getElementById('eval-input4.3').value.trim(),
+        document.getElementById('eval-input4.4').value.trim(),
+        document.getElementById('eval-input4.5').value.trim(),
+        document.getElementById('eval-input4.6').value.trim(),
+        document.getElementById('eval-input4.7').value.trim(),
+        document.getElementById('eval-input4.8').value.trim(),
+        document.getElementById('eval-input4.9').value.trim(),
+        document.getElementById('eval-input4.10').value.trim()
+      ];
+      
+      const correctAnswers = ["2", "2", "2", "16", "4", "2", "16", "8", "2", "4" ];
+      const feedback = document.getElementById('eval-feedback4');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+     function toggleSolution5(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkEvaluation5() {
+      const inputs = [
+        document.getElementById('eval-input5.1').value.trim(),
+        document.getElementById('eval-input5.2').value.trim(),
+        document.getElementById('eval-input5.3').value.trim()
+      ];
+      
+      const correctAnswers = ["20", "60", "-40" ];
+      const feedback = document.getElementById('eval-feedback5');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+    
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Función para verificar dominio
-    function checkDomain() {
+
+    function toggleSolution6(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+    function checkDomain1() {
       const selected = document.querySelector('input[name="dominio"]:checked');
-      const feedback = document.getElementById('domain-feedback');
+      const feedback = document.getElementById('domain-feedback1');
       
       if (!selected) {
         feedback.textContent = "Por favor selecciona una opción";
@@ -375,11 +769,35 @@
         feedback.textContent = "¡Correcto! El dominio es (-∞, 4] porque la expresión dentro de la raíz debe ser ≥ 0";
         feedback.className = "feedback correct";
       } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es (-∞, 4) U (4, ∞) porque la expresión de debajo de la fracción debe ser distinta de 0";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+    function toggleSolution7(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkDomain2() {
+      const selected = document.querySelector('input[name="dominio"]:checked');
+      const feedback = document.getElementById('domain-feedback2');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "B") {
+        feedback.textContent = "¡Correcto! El dominio es (-∞, 4) U (4, ∞) porque la expresión de debajo de la fracción debe ser distinta de 0";
+        feedback.className = "feedback correct";
+      } else {
         feedback.textContent = "Incorrecto. La respuesta correcta es (-∞, 4] porque 4-x debe ser ≥ 0";
         feedback.className = "feedback incorrect";
       }
     }
-    
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Función para verificar tabla de valores
     function checkTable() {
       const val1 = document.getElementById('val1').value.trim();
