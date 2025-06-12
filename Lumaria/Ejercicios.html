@@ -451,6 +451,109 @@
           </div>
         </div>
       </div>
+
+
+      <div class="exercise-container" id="dominio">
+        <h2 class="exercise-title">2. Dominio y rango</h2>
+        <div class="exercise-content">
+          <p>Determina el dominio de la siguiente función:</p>
+          <p>\[ f(x) = \sqrt{\frac{1}{x}} \]</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="A"> \( (0, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="B"> \( (-\infty, 0) \cup (0, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="C"> \( (-\infty, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="D"> \( (-\infty, 0) \)
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkDomain3()">Verificar</button>
+          <div class="feedback" id="domain-feedback3"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution8('domain-solution3')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution3">
+            <p>Para que la fraccion y la raiz esté definida:</p>
+            <p>\[ x \neq 0 \]</p>
+            <p>\[ x > 0 \]</p>
+            <p>Por lo tanto, el dominio es \( (0, \infty) \)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise-container" id="dominio">
+        <h2 class="exercise-title">2. Dominio y rango</h2>
+        <div class="exercise-content">
+          <p>Determina el dominio de la siguiente función:</p>
+          <p>\[ f(x) = x - 1 \]</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="A"> \( (0, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="B"> \( (-\infty, 0) \cup (0, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="C"> \( (-\infty, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="D"> \( (-\infty, 0) \)
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkDomain4()">Verificar</button>
+          <div class="feedback" id="domain-feedback4"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution9('domain-solution4')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution4">
+            <p>Para que la fraccion esté definida:</p>
+            <p>No hay ninguna restriccion. Por lo tanto, el dominio es \( (-\infty, \infty) \)</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="exercise-container" id="dominio">
+        <h2 class="exercise-title">2. Dominio y rango</h2>
+        <div class="exercise-content">
+          <p>Determina el dominio de la siguiente función:</p>
+          <p>\[ f(x) = \sqrt{\frac{x}{x-1}} \]</p>
+          
+          <div class="exercise-options">
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="A"> \( (-\infty, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="B"> \( (1, \infty) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="C"> \( (-\infty, 1) \)
+            </label>
+            <label class="exercise-option">
+              <input type="radio" name="dominio" value="D"> \( (-\infty, 1) \cup (1, \infty) \)
+            </label>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkDomain5()">Verificar</button>
+          <div class="feedback" id="domain-feedback5"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution10('domain-solution5')">Mostrar solución</div>
+          <div class="solution-content" id="domain-solution5">
+            <p>Para que la fraccion y la raíz esté definida:</p>
+            <p>\[x - 1 \neq 0\]</p>
+            <p>\[x  \neq 1\]</p>
+            <p>Puede ser negativo ya que si x es negativo, abajo se tendria negativo y arriba negativo, la division entre negativos es positiva</p>
+            <p>Por lo tanto, el dominio es \( (-\infty, 1) \cup (1, \infty) \)</p>
+          </div>
+        </div>
+      </div>
       
 
       <!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -774,6 +877,31 @@
       }
     }
 
+    function toggleSolution8(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkDomain3() {
+      const selected = document.querySelector('input[name="dominio"]:checked');
+      const feedback = document.getElementById('domain-feedback3');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "A") {
+        feedback.textContent = "¡Correcto! El dominio es (0, ∞) porque la expresión de debajo de la fracción debe ser distinta de 0 y ademas la raiz debe ser positiva";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es (0, ∞) porque x debe ser > 0";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+
     function toggleSolution7(id) {
       const solution = document.getElementById(id);
       solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
@@ -797,6 +925,59 @@
         feedback.className = "feedback incorrect";
       }
     }
+
+
+    function toggleSolution9(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkDomain4() {
+      const selected = document.querySelector('input[name="dominio"]:checked');
+      const feedback = document.getElementById('domain-feedback4');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "C") {
+        feedback.textContent = "¡Correcto! El dominio es (-∞, ∞) porque no hay ninguna restricción para esta función";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es (-∞, ∞) porque no hay ninguna restricción para x - 1";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+
+
+    function toggleSolution10(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkDomain5() {
+      const selected = document.querySelector('input[name="dominio"]:checked');
+      const feedback = document.getElementById('domain-feedback5');
+      
+      if (!selected) {
+        feedback.textContent = "Por favor selecciona una opción";
+        feedback.className = "feedback incorrect";
+        return;
+      }
+      
+      if (selected.value === "D") {
+        feedback.textContent = "¡Correcto! El dominio es (-∞, 1) U (1, ∞) porque conflictua solo en el 1";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Incorrecto. La respuesta correcta es (-∞, 1) U (1, ∞) porque conflictua solo en el 1";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+
     //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Función para verificar tabla de valores
     function checkTable() {
