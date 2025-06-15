@@ -700,3 +700,315 @@ document.addEventListener('DOMContentLoaded', function() {
         feedback.className = "feedback incorrect";
       }
     }
+
+    //----------------------------------------------------------------------------------------------------------------------------------
+
+
+    function checkFractions1() {
+    const inputs = [
+        document.getElementById('frac-input1.1').value.trim(),
+        document.getElementById('frac-input1.2').value.trim(),
+        document.getElementById('frac-input1.3').value.trim(),
+        document.getElementById('frac-input1.4').value.trim(),
+        document.getElementById('frac-input1.5').value.trim(),
+        document.getElementById('frac-input1.6').value.trim(),
+        document.getElementById('frac-input1.7').value.trim(),
+        document.getElementById('frac-input1.8').value.trim(),
+        document.getElementById('frac-input1.9').value.trim(),
+        document.getElementById('frac-input1.10').value.trim()
+    ];
+    
+    const correctAnswers = ["3", "5", "2", "4", "20", "15", "8", "20", "23", "20"];
+    const feedback = document.getElementById('frac-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 10; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+// Función para verificar reducción de términos
+function checkReduction1() {
+    const inputs = [
+        document.getElementById('reduce-input2.11').value.trim(),
+        document.getElementById('reduce-input2.12').value.trim(),
+        document.getElementById('reduce-input2.13').value.trim(),
+        document.getElementById('reduce-input2.14').value.trim(),
+        document.getElementById('reduce-input2.15').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.16').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.17').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.18').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["1", "1", "11", "-7", "1", "1", "11", "-7"];
+    const feedback = document.getElementById('reduce-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 8; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La expresión se redujo correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+
+function checkReduction2() {
+    const inputs = [
+        document.getElementById('reduce-input2.21').value.trim(),
+        document.getElementById('reduce-input2.22').value.trim(),
+        document.getElementById('reduce-input2.23').value.trim(),
+        document.getElementById('reduce-input2.24').value.trim(),
+        document.getElementById('reduce-input2.25').value.trim(),
+        document.getElementById('reduce-input2.26').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.27').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.28').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.29').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["4", "0", "9", "1", "1", "4", "1", "9", "1"];
+    const feedback = document.getElementById('reduce-feedback2');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 8; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La expresión se redujo correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+
+function checkReduction3() {
+    const inputs = [
+        document.getElementById('reduce-input2.31').value.trim(),
+        document.getElementById('reduce-input2.32').value.trim(),
+        document.getElementById('reduce-input2.33').value.trim(),
+        document.getElementById('reduce-input2.34').value.trim(),
+        document.getElementById('reduce-input2.35').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.36').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.37').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.38').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.39').value.trim().toLowerCase(),
+        document.getElementById('reduce-input2.310').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["3", "5", "7", "-11", "-25", "3", "5", "7", "-11", "-25"];
+    const feedback = document.getElementById('reduce-feedback3');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 8; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La expresión se redujo correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+// Función para verificar multiplicación de polinomios
+function checkPolynomials1() {
+    const inputs = [
+        document.getElementById('poly-input3.1').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.2').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.3').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.4').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.5').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.6').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.7').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["x", "2x", "3x", "6", "x", "x", "6"];
+    const feedback = document.getElementById('poly-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La multiplicación se realizó correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+function checkPolynomials2() {
+    const inputs = [
+        document.getElementById('poly-input3.21').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.22').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.23').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.24').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.25').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.26').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.27').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.28').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.29').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.30').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["1", "-2", "1", "5", "-10", "5", "1", "3", "-9", "5"];
+    const feedback = document.getElementById('poly-feedback2');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La multiplicación se realizó correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+function checkPolynomials3() {
+    const inputs = [
+        document.getElementById('poly-input3.1').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.2').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.3').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.4').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.5').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.6').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.7').value.trim().toLowerCase()
+    ];
+    
+    const correctAnswers = ["x", "2x", "3x", "6", "x", "x", "6"];
+    const feedback = document.getElementById('poly-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La multiplicación se realizó correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+//-------------------------------------------------------------------------------------------------------------------------
+// Función para verificar ecuaciones de primer grado
+function checkFirstDegree1() {
+    const inputs = [
+        document.getElementById('eq1-input4.1').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.2').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.3').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.4').value.trim(),
+        document.getElementById('eq1-input4.5').value.trim(),
+        document.getElementById('eq1-input4.6').value.trim(),
+        document.getElementById('eq1-input4.7').value.trim()
+    ];
+    
+    const correctAnswers = ["2x", "2x", "x", "-7", "5", "5", "-12"];
+    const feedback = document.getElementById('eq1-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La ecuación se resolvió correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus pasos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+// Función para verificar ecuaciones de segundo grado
+function checkSecondDegree1() {
+    const inputs = [
+        document.getElementById('eq2-input5.1').value.trim(),
+        document.getElementById('eq2-input5.2').value.trim(),
+        document.getElementById('eq2-input5.3').value.trim(),
+        document.getElementById('eq2-input5.4').value.trim(),
+        document.getElementById('eq2-input5.5').value.trim(),
+        document.getElementById('eq2-input5.6').value.trim(),
+        document.getElementById('eq2-input5.7').value.trim(),
+        document.getElementById('eq2-input5.8').value.trim(),
+        document.getElementById('eq2-input5.9').value.trim(),
+        document.getElementById('eq2-input5.10').value.trim(),
+        document.getElementById('eq2-input5.11').value.trim()
+    ];
+    
+    const correctAnswers = ["1", "-5", "6", "-5", "1", "6","25","-24", "1", "3", "2"];
+    const feedback = document.getElementById('eq2-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 9; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Las raíces se calcularon correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
