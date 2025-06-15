@@ -62,10 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('eval-input1.2').value.trim(),
         document.getElementById('eval-input1.3').value.trim(),
         document.getElementById('eval-input1.4').value.trim(),
-        document.getElementById('eval-input1.5').value.trim()
+        document.getElementById('eval-input1.5').value.trim(),
+        document.getElementById('eval-input1.6').value.trim(),
+        document.getElementById('eval-input1.7').value.trim()
       ];
       
-      const correctAnswers = ["3", "3", "9", "6", "14"];
+      const correctAnswers = ["5", "3", "4", "2", "20","23", "20"];
       const feedback = document.getElementById('eval-feedback1');
       
       let allCorrect = true;
@@ -848,13 +850,13 @@ function checkReduction3() {
 // Función para verificar multiplicación de polinomios
 function checkPolynomials1() {
     const inputs = [
-        document.getElementById('poly-input3.1').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.2').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.3').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.4').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.5').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.6').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.7').value.trim().toLowerCase()
+        document.getElementById('poly-input3.11').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.12').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.13').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.14').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.15').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.16').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.17').value.trim().toLowerCase()
     ];
     
     const correctAnswers = ["x", "2x", "3x", "6", "x", "x", "6"];
@@ -914,17 +916,20 @@ function checkPolynomials2() {
 
 function checkPolynomials3() {
     const inputs = [
-        document.getElementById('poly-input3.1').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.2').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.3').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.4').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.5').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.6').value.trim().toLowerCase(),
-        document.getElementById('poly-input3.7').value.trim().toLowerCase()
+        document.getElementById('poly-input3.31').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.32').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.33').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.34').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.35').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.36').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.37').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.38').value.trim().toLowerCase(),
+        document.getElementById('poly-input3.39').value.trim().toLowerCase()
+       
     ];
     
-    const correctAnswers = ["x", "2x", "3x", "6", "x", "x", "6"];
-    const feedback = document.getElementById('poly-feedback1');
+    const correctAnswers = ["1", "2", "2", "4", "1", "2", "1", "5", "2"];
+    const feedback = document.getElementById('poly-feedback3');
     
     let allCorrect = true;
     for (let i = 0; i < 7; i++) {
