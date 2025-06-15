@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de Precálculo | Cálculo Continuo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cursos.css">
+  <link rel="stylesheet" href="curso-prec.css">
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <!-- Partículas de fondo -->
+  <div id="particles-js"></div>
+  
+  <!-- Barra de navegación -->
+  <header class="math-navbar">
+    <div class="math-logo">
+      <img src="../Imagenes/logo.png" alt="Logo" class="logo-img">
+      <span>Cálculo Continuo</span>
+    </div>
+    
+    <button class="menu-toggle" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="math-nav-buttons">
+      <a href="index.php" class="math-nav-btn">Inicio</a>
+      <a href="contacto.html" class="math-nav-btn">Contacto</a>
+    </nav>
+  </header>
+  
+  <!-- Contenido principal -->
+  <div class="math-course-container">
+    <div class="math-sidebar">
+      <div class="sidebar-content">
+        <h2>Ejercicios por tema</h2>
+        <a href="#suma-fracciones">Suma de fracciones</a>
+        <a href="#reduccion-terminos">Reducción de términos</a>
+        <a href="#multiplicacion-polinomios">Multiplicación de polinomios</a>
+        <a href="#ecuaciones-primer-grado">Ecuaciones primer grado</a>
+        <a href="#ecuaciones-segundo-grado">Ecuaciones segundo grado</a>
+      </div>
+    </div>
+    
+    <div class="math-content">
+      <div class="math-header">
+        <h1>Ejercicios de Precálculo</h1>
+        <p>Practica conceptos fundamentales con estos ejercicios interactivos</p>
+      </div>
+      
+      <!-- Ejercicio 1: Suma de fracciones -->
+      <div class="exercise-container" id="suma-fracciones">
+        <h2 class="exercise-title">1. Suma de fracciones</h2>
+        <div class="exercise-content">
+          <p>Realiza la siguiente suma de fracciones paso a paso:</p>
+          
+          <div class="fill-blank-exercise">
+            <p>\[ \frac{3}{4} + \frac{2}{5} \] = \frac{<input type="text" class="exercise-input" id="frac-input1.1"> \times <input type="text" class="exercise-input" id="frac-input1.2"> + <input type="text" class="exercise-input" id="frac-input1.3"> \times <input type="text" class="exercise-input" id="frac-input1.4">}{<input type="text" class="exercise-input" id="frac-input1.5">} = \frac{<input type="text" class="exercise-input" id="frac-input1.6"> + <input type="text" class="exercise-input" id="frac-input1.7">}{<input type="text" class="exercise-input" id="frac-input1.8">} = \frac{<input type="text" class="exercise-input" id="frac-input1.9">}{<input type="text" class="exercise-input" id="frac-input1.10">} \]</p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkFractions1()">Verificar</button>
+          <div class="feedback" id="frac-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution1('frac-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="frac-solution1">
+            <p>Solución paso a paso:</p>
+            <p>1. Encontrar el mínimo común múltiplo (MCM) de 4 y 5, que es 20</p>
+            <p>2. Convertir cada fracción al denominador común:</p>
+            <p>\[ \frac{3}{4} = \frac{3 \times 5}{4 \times 5} = \frac{15}{20} \]</p>
+            <p>\[ \frac{2}{5} = \frac{2 \times 4}{5 \times 4} = \frac{8}{20} \]</p>
+            <p>3. Sumar los numeradores:</p>
+            <p>\[ \frac{15}{20} + \frac{8}{20} = \frac{23}{20} \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 3</li>
+              <li>Segundo espacio: 5</li>
+              <li>Tercer espacio: 2</li>
+              <li>Cuarto espacio: 4</li>
+              <li>Quinto espacio: 20</li>
+              <li>Sexto espacio: 15</li>
+              <li>Séptimo espacio: 8</li>
+              <li>Octavo espacio: 20</li>
+              <li>Noveno espacio: 23</li>
+              <li>Décimo espacio: 20</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+      <!------------------------------------------------------------------------------------------------------------------------>
+      
+      <!-- Ejercicio 2: Reducción de términos semejantes -->
+      <div class="exercise-container" id="reduccion-terminos">
+        <h2 class="exercise-title">2. Reducción de términos semejantes</h2>
+        <div class="exercise-content">
+          <p>Reduce la siguiente expresión algebraica:</p>
+          <p>\[ 2xy + x - xy + x^2 - 7y + 10x \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Suma de términos con \( x^2 \): <input type="text" class="exercise-input" id="reduce-input2.11">\( x^2 \)</p>
+            <p>2. Suma de términos con \( xy \): \( 2xy - xy = \) <input type="text" class="exercise-input" id="reduce-input2.12">\( xy \)</p>
+            <p>3. Suma de términos con \( x \): \( x + 10x = \) <input type="text" class="exercise-input" id="reduce-input2.13">\( x \)</p>
+            <p>4. Suma de términos con \( y \): <input type="text" class="exercise-input" id="reduce-input2.14">\( y \)</p>
+            <p>5. Expresión final reducida: <input type="text" class="exercise-input" id="reduce-input2.15">\( x^2 + \) <input type="text" class="exercise-input" id="reduce-input2.16">\( xy + \) <input type="text" class="exercise-input" id="reduce-input2.17">\( x + \) <input type="text" class="exercise-input" id="reduce-input2.18">\( y \)</p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkReduction1()">Verificar</button>
+          <div class="feedback" id="reduce-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution4('reduce-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="reduce-solution1">
+            <p>Solución paso a paso:</p>
+            <p>1. Identificar términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \): solo hay 1 término (\( x^2 \))</li>
+              <li>\( xy \): \( 2xy \) y \( -xy \)</li>
+              <li>\( x \): \( x \) y \( 10x \)</li>
+              <li>\( y \): \( -7y \)</li>
+            </ul>
+            <p>2. Reducir términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \) permanece igual</li>
+              <li>\( 2xy - xy = xy \)</li>
+              <li>\( x + 10x = 11x \)</li>
+              <li>\( -7y \) permanece igual</li>
+            </ul>
+            <p>3. Expresión final: \( x^2 + xy + 11x - 7y \)</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 1</li>
+              <li>Segundo espacio: 1</li>
+              <li>Tercer espacio: 11</li>
+              <li>Cuarto espacio: 7</li>
+              <li>Quinto espacio: 1</li>
+              <li>Sexto espacio: 1</li>
+              <li>Séptimo espacio: 11</li>
+              <li>Octavo espacio: 7</li>
+            </ol>
+          </div>
+        </div>
+      
+
+
+
+      
+        <h2 class="exercise-title">2. Reducción de términos semejantes</h2>
+        <div class="exercise-content">
+          <p>Reduce la siguiente expresión algebraica:</p>
+          <p>\[ 10x + 2x^2 + xy - xy^2 - xy + 2x^2 + x^2y - x\]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Suma de términos con \( x^2 \): \( 2x^2 + 2x^2 \) <input type="text" class="exercise-input" id="reduce-input2.21">\( x^2 \)</p>
+            <p>2. Suma de términos con \( xy \): \( xy - xy = \) <input type="text" class="exercise-input" id="reduce-input2.22">\( xy \)</p>
+            <p>3. Suma de términos con \( x \): \( 10x - x = \) <input type="text" class="exercise-input" id="reduce-input2.23">\( x \)</p>
+            <p>4. Suma de términos con \( xy^2 \): <input type="text" class="exercise-input" id="reduce-input2.24">\( xy^2 \)</p>
+            <p>4. Suma de términos con \( x^2y \): <input type="text" class="exercise-input" id="reduce-input2.25">\( x^2y \)</p>
+            <p>6. Expresión final reducida: <input type="text" class="exercise-input" id="reduce-input2.26">\( x^2 + \) <input type="text" class="exercise-input" id="reduce-input2.27">\( x^2y + \) <input type="text" class="exercise-input" id="reduce-input2.28">\( x + \) <input type="text" class="exercise-input" id="reduce-input2.29">\( xy^2 \)</p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkReduction2()">Verificar</button>
+          <div class="feedback" id="reduce-feedback2"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution5('reduce-solution2')">Mostrar solución</div>
+          <div class="solution-content" id="reduce-solution2">
+            <p>Solución paso a paso:</p>
+            <p>1. Identificar términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \): solo hay 1 término (\( x^2 \))</li>
+              <li>\( xy \): \( 2xy \) y \( -xy \)</li>
+              <li>\( x \): \( x \) y \( 10x \)</li>
+              <li>\( y \): \( -7y \)</li>
+            </ul>
+            <p>2. Reducir términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \) permanece igual</li>
+              <li>\( 2xy - xy = xy \)</li>
+              <li>\( x + 10x = 11x \)</li>
+              <li>\( -7y \) permanece igual</li>
+            </ul>
+            <p>3. Expresión final: \( x^2 + xy + 11x - 7y \)</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 1</li>
+              <li>Segundo espacio: 1</li>
+              <li>Tercer espacio: 11</li>
+              <li>Cuarto espacio: 7</li>
+              <li>Quinto espacio: 1</li>
+              <li>Sexto espacio: 1</li>
+              <li>Séptimo espacio: 11</li>
+              <li>Octavo espacio: 7</li>
+            </ol>
+          </div>
+        </div>
+      
+
+
+
+       
+        <h2 class="exercise-title">2. Reducción de términos semejantes</h2>
+        <div class="exercise-content">
+          <p>Reduce la siguiente expresión algebraica:</p>
+          <p>\[ x^2 + 7x - 3y + 5x^2y - 21 - 8y + 2x^2 - 4 \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Suma de términos con \( x^2 \): \( x^2 + 2x^2 =\) <input type="text" class="exercise-input" id="reduce-input2.31">\( x^2 \)</p>
+            <p>2. Suma de términos con \( x^2y \): <input type="text" class="exercise-input" id="reduce-input2.32">\( x^2y \)</p>
+            <p>3. Suma de términos con \( x \): <input type="text" class="exercise-input" id="reduce-input2.33">\( x \)</p>
+            <p>4. Suma de términos con \( y \): \( -3y - 8y =\) <input type="text" class="exercise-input" id="reduce-input2.34">\( y \)</p>
+            <p>5. Suma de términos independientes: \( -21 - 4\) <input type="text" class="exercise-input" id="reduce-input2.35"></p>
+            <p>6. Expresión final reducida: <input type="text" class="exercise-input" id="reduce-input2.36">\( x^2 + \) <input type="text" class="exercise-input" id="reduce-input2.37">\( x^2y + \) <input type="text" class="exercise-input" id="reduce-input2.38">\( x + \) <input type="text" class="exercise-input" id="reduce-input2.39">\( y  + \) <input type="text" class="exercise-input" id="reduce-input2.310"></p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkReduction3()">Verificar</button>
+          <div class="feedback" id="reduce-feedback3"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution6('reduce-solution3')">Mostrar solución</div>
+          <div class="solution-content" id="reduce-solution3">
+            <p>Solución paso a paso:</p>
+            <p>1. Identificar términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \): solo hay 1 término (\( x^2 \))</li>
+              <li>\( xy \): \( 2xy \) y \( -xy \)</li>
+              <li>\( x \): \( x \) y \( 10x \)</li>
+              <li>\( y \): \( -7y \)</li>
+            </ul>
+            <p>2. Reducir términos semejantes:</p>
+            <ul>
+              <li>\( x^2 \) permanece igual</li>
+              <li>\( 2xy - xy = xy \)</li>
+              <li>\( x + 10x = 11x \)</li>
+              <li>\( -7y \) permanece igual</li>
+            </ul>
+            <p>3. Expresión final: \( x^2 + xy + 11x - 7y \)</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 1</li>
+              <li>Segundo espacio: 1</li>
+              <li>Tercer espacio: 11</li>
+              <li>Cuarto espacio: 7</li>
+              <li>Quinto espacio: 1</li>
+              <li>Sexto espacio: 1</li>
+              <li>Séptimo espacio: 11</li>
+              <li>Octavo espacio: 7</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+      <!------------------------------------------------------------------------------------------------------------------------->
+      
+      <!-- Ejercicio 3: Multiplicación de polinomios -->
+      <div class="exercise-container" id="multiplicacion-polinomios">
+        <h2 class="exercise-title">3. Multiplicación de polinomios</h2>
+        <div class="exercise-content">
+          <p>Multiplica los siguientes polinomios:</p>
+          <p>\[ (x + 3)(x - 2) \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Aplicar propiedad distributiva:</p>
+            <p>\[ x \cdot (x-2) + 3 \cdot (x-2) \]</p>
+            <p>\[ x \cdot x - x \cdot 2 + 3 \cdot x - 3 \cdot 2 \]</p>
+            <p>2. Realizar multiplicaciones:</p>
+            <p><input type="text" class="exercise-input" id="poly-input3.11">\(^2 - \)<input type="text" class="exercise-input" id="poly-input3.12">\( + \)<input type="text" class="exercise-input" id="poly-input3.13">\( - \)<input type="text" class="exercise-input" id="poly-input3.14"></p>
+            <p>3. Reducir términos semejantes:</p>
+            <p><input type="text" class="exercise-input" id="poly-input3.15">\(^2 + \)<input type="text" class="exercise-input" id="poly-input3.16">\( - \)<input type="text" class="exercise-input" id="poly-input3.17"></p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkPolynomials1()">Verificar</button>
+          <div class="feedback" id="poly-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution7('poly-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="poly-solution1">
+            <p>Solución paso a paso:</p>
+            <p>1. Aplicar propiedad distributiva (FOIL):</p>
+            <p>\[ (x + 3)(x - 2) = x \cdot x + x \cdot (-2) + 3 \cdot x + 3 \cdot (-2) \]</p>
+            <p>2. Realizar las multiplicaciones:</p>
+            <p>\[ x^2 - 2x + 3x - 6 \]</p>
+            <p>3. Reducir términos semejantes:</p>
+            <p>\[ x^2 + x - 6 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: x</li>
+              <li>Segundo espacio: 2x</li>
+              <li>Tercer espacio: 3x</li>
+              <li>Cuarto espacio: 6</li>
+              <li>Quinto espacio: x</li>
+              <li>Sexto espacio: x</li>
+              <li>Séptimo espacio: 6</li>
+            </ol>
+          </div>
+        </div>
+
+
+        <h2 class="exercise-title">3. Multiplicación de polinomios</h2>
+        <div class="exercise-content">
+          <p>Multiplica los siguientes polinomios:</p>
+          <p>\[ (x + 5)(x^2 - 2x + 1) \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Aplicar propiedad distributiva:</p>
+            <p>\[ x (x^2 - 2x + 1) + 5 (x^2 - 2x + 1) \]</p>
+            <p>\[ x (x^2) + x(-2x) + x(1) + 5(x^2) + 5(-2x) + 5(1) \]</p>
+            <p>2. Realizar multiplicaciones:</p>
+            <p><input type="text" class="exercise-input" id="poly-input3.21">\(x^3 + \)<input type="text" class="exercise-input" id="poly-input3.22">\(x^2 + \)<input type="text" class="exercise-input" id="poly-input3.23">\( x + \)<input type="text" class="exercise-input" id="poly-input3.24">\( x^2 + \)<input type="text" class="exercise-input" id="poly-input3.25">\( x + \)<input type="text" class="exercise-input" id="poly-input3.26"></p>
+            <p>3. Reducir términos semejantes:</p>
+            <p><input type="text" class="exercise-input" id="poly-input3.27">\(x^3 + \)<input type="text" class="exercise-input" id="poly-input3.28">\( x^2 + \)<input type="text" class="exercise-input" id="poly-input3.29">\( x + \)<input type="text" class="exercise-input" id="poly-input3.30"></p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkPolynomials2()">Verificar</button>
+          <div class="feedback" id="poly-feedback2"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution8('poly-solution2')">Mostrar solución</div>
+          <div class="solution-content" id="poly-solution2">
+            <p>Solución paso a paso:</p>
+            <p>1. Aplicar propiedad distributiva:</p>
+            <p>\[ (x + 5)(x^2 - 2x + 1) = x (x^2) + x(-2x) + x(1) + 5(x^2) + 5(-2x) + 5(1) \]</p>
+            <p>2. Realizar las multiplicaciones:</p>
+            <p>\[x^3 - 2x^2 + x + 5x^2 - 10x + 5\]</p>
+            <p>3. Reducir y organizar términos semejantes:</p>
+            <p>\[ x^3 + 3x^2 -9x +5  \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 1</li>
+              <li>Segundo espacio: -2</li>
+              <li>Tercer espacio: 1</li>
+              <li>Cuarto espacio: 5</li>
+              <li>Quinto espacio: -10</li>
+              <li>Sexto espacio: 5</li>
+              <li>Séptimo espacio: 1</li>
+              <li>Octavo espacio: 3</li>
+              <li>Noveno espacio: -9</li>
+              <li>Decimo espacio: 5</li>
+            </ol>
+          </div>
+        </div>
+
+
+      </div>
+      
+
+    
+      <!-- Ejercicio 4: Ecuaciones de primer grado -->
+      <div class="exercise-container" id="ecuaciones-primer-grado">
+        <h2 class="exercise-title">4. Ecuaciones de primer grado</h2>
+        <div class="exercise-content">
+          <p>Resuelve la siguiente ecuación:</p>
+          <p>\[ 3x + 5 = 2x - 7 \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Restar \( 2x \) a ambos lados:</p>
+            <p>\( 3x - \)<input type="text" class="exercise-input" id="eq1-input4.1">\( + 5 = 2x - \)<input type="text" class="exercise-input" id="eq1-input4.2"> \( - 7\)</p>
+            <p>Simplificado: <input type="text" class="exercise-input" id="eq1-input4.3"> + 5 = <input type="text" class="exercise-input" id="eq1-input4.4"></p>
+            <p>2. Restar 5 a ambos lados:</p>
+            <p>\( x + 5  - \)<input type="text" class="exercise-input" id="eq1-input4.5">\( = -7 - \)<input type="text" class="exercise-input" id="eq1-input4.6"></p>
+            <p>Simplificado: \( x = \) <input type="text" class="exercise-input" id="eq1-input4.7"></p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkFirstDegree1()">Verificar</button>
+          <div class="feedback" id="eq1-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution10('eq1-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="eq1-solution1">
+            <p>Solución paso a paso:</p>
+            <p>1. Restar \( 2x \) a ambos lados:</p>
+            <p>\[ 3x - 2x + 5 = 2x - 2x - 7 \]</p>
+            <p>Simplificado: \( x + 5 = -7 \)</p>
+            <p>2. Restar 5 a ambos lados:</p>
+            <p>\[ x + 5 - 5 = -7 - 5 \]</p>
+            <p>Simplificado: \( x = -12 \)</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 2x</li>
+              <li>Segundo espacio: 2x</li>
+              <li>Tercer espacio: x</li>
+              <li>Cuarto espacio: -7</li>
+              <li>Quinto espacio: 5</li>
+              <li>Sexto espacio: 5</li>
+              <li>Séptimo espacio: -12</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ejercicio 5: Ecuaciones de segundo grado -->
+      <div class="exercise-container" id="ecuaciones-segundo-grado">
+        <h2 class="exercise-title">5. Ecuaciones de segundo grado</h2>
+        <div class="exercise-content">
+          <p>Resuelve la siguiente ecuación cuadrática:</p>
+          <p>\[ x^2 - 5x + 6 = 0 \]</p>
+          
+          <div class="fill-blank-exercise">
+            <p>1. Identificar coeficientes:</p>
+            <p>\( a = \) <input type="text" class="exercise-input" id="eq2-input5.1">, \( b = \) <input type="text" class="exercise-input" id="eq2-input5.2">, \( c = \) <input type="text" class="exercise-input" id="eq2-input5.3"></p>
+            <p>2. Aplicar fórmula cuadrática:</p>
+            <p>\[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]</p>
+            <p>3. Calcular discriminante:</p>
+            <p> \( \Delta = b^2 - 4ac = \)(<input type="text" class="exercise-input" id="eq2-input5.4">)\(^2 - 4 \cdot \)<input type="text" class="exercise-input" id="eq2-input5.5">\( \cdot \)<input type="text" class="exercise-input" id="eq2-input5.6">\( = \)<input type="text" class="exercise-input" id="eq2-input5.7"> \( + \)<input type="text" class="exercise-input" id="eq2-input5.8">\( = \)<input type="text" class="exercise-input" id="eq2-input5.9"></p>
+            <p>4. Calcular raíces:</p>
+            <p>\( x_1 = \frac{5 + \sqrt{1}}{2} = \frac{5 + 1}{2} = \frac{6}{2} = \)<input type="text" class="exercise-input" id="eq2-input5.10"></p>
+            <p>\( x_2 = \frac{5 - \sqrt{1}}{2} = \frac{5 - 1}{2} = \frac{4}{2} = \)<input type="text" class="exercise-input" id="eq2-input5.11"></p>
+          </div>
+          
+          <button class="btn btn-check" onclick="checkSecondDegree1()">Verificar</button>
+          <div class="feedback" id="eq2-feedback1"></div>
+          
+          <div class="solution-toggle" onclick="toggleSolution13('eq2-solution1')">Mostrar solución</div>
+          <div class="solution-content" id="eq2-solution1">
+            <p>Solución paso a paso:</p>
+            <p>1. Identificar coeficientes:</p>
+            <p>\( a = 1 \), \( b = -5 \), \( c = 6 \)</p>
+            <p>2. Calcular discriminante:</p>
+            <p>\[ \Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 25 - 24 = 1 \]</p>
+            <p>3. Aplicar fórmula cuadrática:</p>
+            <p>\[ x = \frac{-(-5) \pm \sqrt{1}}{2 \cdot 1} = \frac{5 \pm 1}{2} \]</p>
+            <p>4. Calcular raíces:</p>
+            <p>\[ x_1 = \frac{5 + 1}{2} = 3 \]</p>
+            <p>\[ x_2 = \frac{5 - 1}{2} = 2 \]</p>
+            <p>Los valores correctos para completar son:</p>
+            <ol>
+              <li>Primer espacio: 1</li>
+              <li>Segundo espacio: -5</li>
+              <li>Tercer espacio: 6</li>
+              <li>Cuarto espacio: -5</li>
+              <li>Quinto espacio: 1</li>
+              <li>Sexto espacio: 6</li>
+              <li>Séptimo espacio: 1</li>
+              <li>Octavo espacio: 3</li>
+              <li>Noveno espacio: 2</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Configuración de partículas
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+        "color": {"value": "#9d50bb"},
+        "shape": {"type": "circle"},
+        "opacity": {"value": 0.5, "random": true},
+        "size": {"value": 3, "random": true},
+        "line_linked": {"enable": true, "distance": 150, "color": "#9d50bb", "opacity": 0.4, "width": 1},
+        "move": {"enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out"}
+      }
+    });
+  </script>
+  <script src="precalculo.js"></script>
+</body>
+</html>
