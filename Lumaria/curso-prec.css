@@ -131,31 +131,36 @@ body {
 
 /* Contenedor principal del curso */
 .math-course-container {
-    max-width: 1200px;
+   max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     position: relative;
     min-height: 100vh;
     box-sizing: border-box;
-    padding-top: 80px;
+    padding-top: 80px; 
+
+
 }
 
 /* Sidebar */
 .math-sidebar {
     width: 250px;
-    background: rgba(30, 30, 30, 0.8);
+    background: rgba(30, 30, 30, 0.8); 
     border-radius: 12px;
     position: fixed;
     top: 90px;
-    bottom: 20px;
+    bottom: 20px; 
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 215, 0, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    overflow-y: auto; 
+
 }
 
 .sidebar-content {
     padding: 20px;
+    overflow-y: auto; /* Permite scroll */
+    height: calc(100vh - 150px); /* Altura dinámica */
 }
 
 .math-sidebar h2 {
@@ -183,10 +188,13 @@ body {
 
 /* Contenido principal */
 .math-content {
-    margin-left: 290px;
-    padding: 30px 20px;
+     margin-left: 290px;
+    padding: 30px 20px; 
     margin-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
+
+
+
 }
 
 .math-header h1 {
@@ -473,7 +481,7 @@ body {
       padding: 25px;
       margin: 30px 0;
       border-left: 4px solid var(--math-purple);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
     }
     
     .exercise-title {
@@ -489,7 +497,7 @@ body {
     }
     
     .exercise-input {
-      padding: 8px;
+      padding: 10px;
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,215,0,0.3);
       border-radius: 6px;
@@ -622,3 +630,39 @@ body {
     background: rgba(157, 80, 187, 0.3);
     box-shadow: 0 15px 40px rgba(157,80,187,0.4);
   }
+
+
+   .btn-check-answer {
+      background: linear-gradient(135deg, var(--math-purple) 0%, #6e48aa 100%);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    
+    .btn-check-answer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(157, 80, 187, 0.5);
+    }
+     .fraction {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 5px;
+  }
+  .fraction span {
+    display: block;
+  }
+  .fraction span:first-child {
+    border-bottom: 1px solid #f0e6ff;
+    padding-bottom: 2px;
+  }
+  .exercise-input {
+    width: 20px;
+    text-align: center;
+    margin: 0 2px;
+  }
+
