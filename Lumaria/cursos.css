@@ -300,7 +300,8 @@ body {
     padding: 25px;
     margin-top: 60px;
     background: rgba(18, 18, 18, 0.8);
-    border-top: 1px solid rgba(255, 215, 0, 0.1);
+    border-top: 1px solid rgba(255, 215, 0, 0.1); 
+
 }
 
 .math-logo {
