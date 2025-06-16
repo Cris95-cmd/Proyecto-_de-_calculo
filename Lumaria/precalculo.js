@@ -708,19 +708,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function checkFractions1() {
     const inputs = [
-        document.getElementById('frac-input1.1').value.trim(),
-        document.getElementById('frac-input1.2').value.trim(),
-        document.getElementById('frac-input1.3').value.trim(),
-        document.getElementById('frac-input1.4').value.trim(),
-        document.getElementById('frac-input1.5').value.trim(),
-        document.getElementById('frac-input1.6').value.trim(),
-        document.getElementById('frac-input1.7').value.trim(),
-        document.getElementById('frac-input1.8').value.trim(),
-        document.getElementById('frac-input1.9').value.trim(),
-        document.getElementById('frac-input1.10').value.trim()
+        document.getElementById('frac-input1.11').value.trim(),
+        document.getElementById('frac-input1.12').value.trim(),
+        document.getElementById('frac-input1.13').value.trim(),
+        document.getElementById('frac-input1.14').value.trim(),
+        document.getElementById('frac-input1.15').value.trim(),
+        document.getElementById('frac-input1.16').value.trim(),
+        document.getElementById('frac-input1.17').value.trim(),
+        document.getElementById('frac-input1.18').value.trim(),
+        document.getElementById('frac-input1.19').value.trim(),
+        document.getElementById('frac-input1.110').value.trim(),
+        document.getElementById('frac-input1.111').value.trim()
     ];
     
-    const correctAnswers = ["3", "5", "2", "4", "20", "15", "8", "20", "23", "20"];
+    const correctAnswers = ["3", "5", "2", "4", "4", "5", "15", "8", "20", "23", "20"];
     const feedback = document.getElementById('frac-feedback1');
     
     let allCorrect = true;
@@ -739,6 +740,88 @@ document.addEventListener('DOMContentLoaded', function() {
         feedback.className = "feedback incorrect";
     }
 }
+
+
+
+
+
+ function checkFractions2() {
+    const inputs = [
+        document.getElementById('frac-input1.21').value.trim(),
+        document.getElementById('frac-input1.22').value.trim(),
+        document.getElementById('frac-input1.23').value.trim(),
+        document.getElementById('frac-input1.24').value.trim(),
+        document.getElementById('frac-input1.25').value.trim(),
+        document.getElementById('frac-input1.26').value.trim(),
+        document.getElementById('frac-input1.27').value.trim(),
+        document.getElementById('frac-input1.28').value.trim(),
+        document.getElementById('frac-input1.29').value.trim(),
+        document.getElementById('frac-input1.210').value.trim(),
+        document.getElementById('frac-input1.211').value.trim()
+    ];
+    
+    const correctAnswers = ["5", "3", "7", "7", "7", "3", "15", "49", "21", "64", "21"];
+    const feedback = document.getElementById('frac-feedback2');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 10; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+
+
+
+
+function checkFractions3() {
+    const inputs = [
+        document.getElementById('frac-input1.31').value.trim(),
+        document.getElementById('frac-input1.32').value.trim(),
+        document.getElementById('frac-input1.33').value.trim(),
+        document.getElementById('frac-input1.34').value.trim(),
+        document.getElementById('frac-input1.35').value.trim(),
+        document.getElementById('frac-input1.36').value.trim(),
+        document.getElementById('frac-input1.37').value.trim(),
+        document.getElementById('frac-input1.38').value.trim(),
+        document.getElementById('frac-input1.39').value.trim(),
+        document.getElementById('frac-input1.310').value.trim(),
+        document.getElementById('frac-input1.311').value.trim()
+    ];
+    
+    const correctAnswers = ["4", "4", "3", "3", "3", "4", "16", "9", "12", "25", "12"];
+    const feedback = document.getElementById('frac-feedback3');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 10; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Todos los valores son correctos";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+
 
 // Función para verificar reducción de términos
 function checkReduction1() {
@@ -893,7 +976,7 @@ function checkPolynomials2() {
         document.getElementById('poly-input3.30').value.trim().toLowerCase()
     ];
     
-    const correctAnswers = ["1", "-2", "1", "5", "-10", "5", "1", "3", "-9", "5"];
+    const correctAnswers = ["x", "-2x", "x", "5x", "-10x", "5", "x", "3x", "-9x", "5"];
     const feedback = document.getElementById('poly-feedback2');
     
     let allCorrect = true;
@@ -928,7 +1011,7 @@ function checkPolynomials3() {
        
     ];
     
-    const correctAnswers = ["1", "2", "2", "4", "1", "2", "1", "5", "2"];
+    const correctAnswers = ["x", "-2x", "2x", "-4x", "-x", "2x", "x", "-5x", "2x"];
     const feedback = document.getElementById('poly-feedback3');
     
     let allCorrect = true;
@@ -953,13 +1036,13 @@ function checkPolynomials3() {
 // Función para verificar ecuaciones de primer grado
 function checkFirstDegree1() {
     const inputs = [
-        document.getElementById('eq1-input4.1').value.trim().toLowerCase(),
-        document.getElementById('eq1-input4.2').value.trim().toLowerCase(),
-        document.getElementById('eq1-input4.3').value.trim().toLowerCase(),
-        document.getElementById('eq1-input4.4').value.trim(),
-        document.getElementById('eq1-input4.5').value.trim(),
-        document.getElementById('eq1-input4.6').value.trim(),
-        document.getElementById('eq1-input4.7').value.trim()
+        document.getElementById('eq1-input4.11').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.12').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.13').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.14').value.trim(),
+        document.getElementById('eq1-input4.15').value.trim(),
+        document.getElementById('eq1-input4.16').value.trim(),
+        document.getElementById('eq1-input4.17').value.trim()
     ];
     
     const correctAnswers = ["2x", "2x", "x", "-7", "5", "5", "-12"];
@@ -981,6 +1064,84 @@ function checkFirstDegree1() {
         feedback.className = "feedback incorrect";
     }
 }
+
+
+function checkFirstDegree2() {
+    const inputs = [
+        document.getElementById('eq1-input4.21').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.22').value.trim(),
+        document.getElementById('eq1-input4.23').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.24').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.25').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.26').value.trim(),
+        document.getElementById('eq1-input4.27').value.trim(),
+        document.getElementById('eq1-input4.28').value.trim(),
+        document.getElementById('eq1-input4.29').value.trim()
+    ];
+    
+    const correctAnswers = ["2x", "2", "2x", "2x", "x", "2", "4", "4", "-2"];
+    const feedback = document.getElementById('eq1-feedback2');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La ecuación se resolvió correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus pasos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
+
+
+function checkFirstDegree3() {
+    const inputs = [
+        document.getElementById('eq1-input4.31').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.32').value.trim(),
+        document.getElementById('eq1-input4.33').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.34').value.trim(),
+        document.getElementById('eq1-input4.35').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.36').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.37').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.38').value.trim(),
+        document.getElementById('eq1-input4.39').value.trim(),
+        document.getElementById('eq1-input4.310').value.trim(),
+        document.getElementById('eq1-input4.311').value.trim(),
+        document.getElementById('eq1-input4.312').value.trim(),
+        document.getElementById('eq1-input4.313').value.trim(),
+        document.getElementById('eq1-input4.314').value.trim(),
+        document.getElementById('eq1-input4.315').value.trim().toLowerCase(),
+        document.getElementById('eq1-input4.316').value.trim()
+    ];
+    
+    const correctAnswers = ["3x", "12", "6x", "18", "6x", "6x", "-3x", "18", "12", "12", "30", "-3", "30", "-3", "x", "-10"];
+    const feedback = document.getElementById('eq1-feedback3');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! La ecuación se resolvió correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus pasos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
 
 // Función para verificar ecuaciones de segundo grado
 function checkSecondDegree1() {
@@ -1017,3 +1178,171 @@ function checkSecondDegree1() {
         feedback.className = "feedback incorrect";
     }
 }
+
+
+// Funciones para mostrar/ocultar soluciones
+    function toggleSolution1(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleSolution2(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Función para verificar factorización
+    function checkFactorization1() {
+      const inputs = [
+        document.getElementById('factor-input1.1').value.trim(),
+        document.getElementById('factor-input1.2').value.trim(),
+        document.getElementById('factor-input1.3').value.trim(),
+        document.getElementById('factor-input1.4').value.trim(),
+        document.getElementById('factor-input1.5').value.trim()
+      ];
+      
+      const correctAnswers = ["3", "6", "9", "3", "3"];
+      const feedback = document.getElementById('factor-feedback1');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 5; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! La factorización es perfecta";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+
+    //----------------------------------------------------------------------------------------------------------------------
+    // Función para verificar desigualdades
+    function checkInequality1() {
+      const inputs = [
+        document.getElementById('ineq-input2.1').value.trim(),
+        document.getElementById('ineq-input2.2').value.trim(),
+        document.getElementById('ineq-input2.3').value.trim(),
+        document.getElementById('ineq-input2.4').value.trim(),
+        document.getElementById('ineq-input2.5').value.trim(),
+        document.getElementById('ineq-input2.6').value.trim(),
+        document.getElementById('ineq-input2.7').value.trim()
+      ];
+      
+      const correctAnswers = ["5", "5", "12", "3x", "12", "4", "4"];
+      const feedback = document.getElementById('ineq-feedback2');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! La desigualdad se resolvió perfectamente";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Recuerda mantener la desigualdad cuando divides por números positivos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+
+
+     function toggleSolution3(id) {
+      const solution = document.getElementById(id);
+      solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+    }
+
+
+     function checkInequality2() {
+      const inputs = [
+        document.getElementById('ineq-input6.21').value.trim(),
+        document.getElementById('ineq-input6.22').value.trim(),
+        document.getElementById('ineq-input6.23').value.trim(),
+        document.getElementById('ineq-input6.24').value.trim(),
+        document.getElementById('ineq-input6.25').value.trim(),
+        document.getElementById('ineq-input6.26').value.trim(),
+        document.getElementById('ineq-input6.27').value.trim(),
+        document.getElementById('ineq-input6.28').value.trim(),
+        document.getElementById('ineq-input6.29').value.trim(),
+        document.getElementById('ineq-input6.210').value.trim(),
+        document.getElementById('ineq-input6.211').value.trim(),
+        document.getElementById('ineq-input6.212').value.trim(),
+        document.getElementById('ineq-input6.213').value.trim(),
+        document.getElementById('ineq-input6.214').value.trim(),
+        document.getElementById('ineq-input6.215').value.trim(),
+        document.getElementById('ineq-input6.216').value.trim(),
+        document.getElementById('ineq-input6.217').value.trim(),
+        document.getElementById('ineq-input6.218').value.trim(),
+        document.getElementById('ineq-input6.219').value.trim(),
+        document.getElementById('ineq-input6.220').value.trim(),
+        document.getElementById('ineq-input6.221').value.trim()
+      ];
+      
+      const correctAnswers = ["6x", "3", "5x", "5", "6x", "3", "3", "5x", "5", "3", "6x", "5x", "2", "6x", "5x", "5x", "2", "5x", "x", "2", "2"];
+      const feedback = document.getElementById('ineq-feedback2');
+      
+      let allCorrect = true;
+      for (let i = 0; i < 7; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      
+      if (allCorrect) {
+        feedback.textContent = "¡Correcto! La desigualdad se resolvió perfectamente";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Algunos valores son incorrectos. Recuerda mantener la desigualdad cuando divides por números positivos.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+
+    //------------------------------------------------------------------------------------------------------------------------------
+
+    // Menú responsive
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navButtons = document.querySelector('.math-nav-buttons');
+
+      function toggleMenu() {
+        menuToggle.classList.toggle('active');
+        navButtons.classList.toggle('active');
+        
+        const spans = menuToggle.querySelectorAll('span');
+        if (navButtons.classList.contains('active')) {
+          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        } else {
+          spans.forEach(span => {
+            span.style.transform = '';
+            span.style.opacity = '';
+          });
+        }
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMenu);
+      }
+
+      // Cerrar menú al hacer clic en un enlace (solo móviles)
+      const navLinks = document.querySelectorAll('.math-nav-btn');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            toggleMenu();
+          }
+        });
+      });
+    });
