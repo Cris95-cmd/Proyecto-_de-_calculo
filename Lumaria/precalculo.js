@@ -1146,21 +1146,56 @@ function checkFirstDegree3() {
 // Función para verificar ecuaciones de segundo grado
 function checkSecondDegree1() {
     const inputs = [
-        document.getElementById('eq2-input5.1').value.trim(),
-        document.getElementById('eq2-input5.2').value.trim(),
-        document.getElementById('eq2-input5.3').value.trim(),
-        document.getElementById('eq2-input5.4').value.trim(),
-        document.getElementById('eq2-input5.5').value.trim(),
-        document.getElementById('eq2-input5.6').value.trim(),
-        document.getElementById('eq2-input5.7').value.trim(),
-        document.getElementById('eq2-input5.8').value.trim(),
-        document.getElementById('eq2-input5.9').value.trim(),
-        document.getElementById('eq2-input5.10').value.trim(),
-        document.getElementById('eq2-input5.11').value.trim()
+        document.getElementById('eq2-input5.11').value.trim(),
+        document.getElementById('eq2-input5.12').value.trim(),
+        document.getElementById('eq2-input5.13').value.trim(),
+        document.getElementById('eq2-input5.14').value.trim(),
+        document.getElementById('eq2-input5.15').value.trim(),
+        document.getElementById('eq2-input5.16').value.trim(),
+        document.getElementById('eq2-input5.17').value.trim(),
+        document.getElementById('eq2-input5.18').value.trim(),
+        document.getElementById('eq2-input5.19').value.trim(),
+        document.getElementById('eq2-input5.20').value.trim(),
+        document.getElementById('eq2-input5.1.1').value.trim()
     ];
     
-    const correctAnswers = ["1", "-5", "6", "-5", "1", "6","25","-24", "1", "3", "2"];
+    const correctAnswers = ["1", "-5", "6", "-5", "1", "6","25","24", "1", "3", "2"];
     const feedback = document.getElementById('eq2-feedback1');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 9; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Las raíces se calcularon correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+function checkSecondDegree2() {
+    const inputs = [
+        document.getElementById('eq2-input5.21').value.trim(),
+        document.getElementById('eq2-input5.22').value.trim(),
+        document.getElementById('eq2-input5.23').value.trim(),
+        document.getElementById('eq2-input5.24').value.trim(),
+        document.getElementById('eq2-input5.25').value.trim(),
+        document.getElementById('eq2-input5.26').value.trim(),
+        document.getElementById('eq2-input5.27').value.trim(),
+        document.getElementById('eq2-input5.28').value.trim(),
+        document.getElementById('eq2-input5.29').value.trim(),
+        document.getElementById('eq2-input5.30').value.trim(),
+        document.getElementById('eq2-input5.2.1').value.trim()
+    ];
+    
+    const correctAnswers = ["1", "13", "42", "13", "1", "42","169","168", "1", "-6", "-7"];
+    const feedback = document.getElementById('eq2-feedback2');
     
     let allCorrect = true;
     for (let i = 0; i < 9; i++) {
