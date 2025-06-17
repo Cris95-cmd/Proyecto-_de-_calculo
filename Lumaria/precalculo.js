@@ -1215,6 +1215,42 @@ function checkSecondDegree2() {
 }
 
 
+    function checkSecondDegree3() {
+    const inputs = [
+        document.getElementById('eq2-input5.31').value.trim(),
+        document.getElementById('eq2-input5.32').value.trim(),
+        document.getElementById('eq2-input5.33').value.trim(),
+        document.getElementById('eq2-input5.34').value.trim(),
+        document.getElementById('eq2-input5.35').value.trim(),
+        document.getElementById('eq2-input5.36').value.trim(),
+        document.getElementById('eq2-input5.37').value.trim(),
+        document.getElementById('eq2-input5.38').value.trim(),
+        document.getElementById('eq2-input5.39').value.trim(),
+        document.getElementById('eq2-input5.40').value.trim(),
+        document.getElementById('eq2-input5.4.1').value.trim()
+    ];
+    
+    const correctAnswers = ["1", "-2", "-99", "-2", "1", "-99","4","-396", "400", "11", "-9"];
+    const feedback = document.getElementById('eq2-feedback3');
+    
+    let allCorrect = true;
+    for (let i = 0; i < 9; i++) {
+        if (inputs[i] !== correctAnswers[i]) {
+            allCorrect = false;
+            break;
+        }
+    }
+    
+    if (allCorrect) {
+        feedback.textContent = "¡Correcto! Las raíces se calcularon correctamente";
+        feedback.className = "feedback correct";
+    } else {
+        feedback.textContent = "Algunos valores son incorrectos. Revisa tus cálculos.";
+        feedback.className = "feedback incorrect";
+    }
+}
+
+
 // Funciones para mostrar/ocultar soluciones
     function toggleSolution1(id) {
       const solution = document.getElementById(id);
